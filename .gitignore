@@ -1,0 +1,11 @@
+
+# Metadata junk
+.DS_Store
+
+# Temporary files
+*~
+.*.sw?
+
+# Xcode user data
+xcuserdata/
+

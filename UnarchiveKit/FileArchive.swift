@@ -1,0 +1,43 @@
+//
+//  FileArchive.swift
+//  UnarchiveKit
+//
+//  Created by James Lawton on 7/19/16.
+//  Copyright © 2016 James Lawton. All rights reserved.
+//
+
+import Foundation
+
+/// A protocol describing multi-file archives
+public protocol FileArchive {
+
+    func allFiles() -> [ArchivedFileInfo]
+
+    func extractDataStream(fileInfo: ArchivedFileInfo) throws -> InputStream
+
+    // This has a default implementation based on `extractDataStream(fileInfo:)`
+    func extractData(fileInfo: ArchivedFileInfo) throws -> Data
+
+    // This has a default implementation based on `extractDataStream(fileInfo:)`
+    func extractFile(fileInfo: ArchivedFileInfo, to url: URL) throws
+
+    // This has a default implementation based on `allFiles()` and `extractFile(fileInfo:url:)`
+    func extractAllFiles(toDirectory directory: URL) throws
+
+}
+
+// A protocol describing a single archived file
+public protocol ArchivedFileInfo {
+    var path: ArchivedFilePath { get }
+}
+
+public func openFileArchive(url: URL) throws -> FileArchive? {
+    guard let format = try guessFormatFromMagicBytes(url: url) else {
+        return nil
+    }
+
+    switch format {
+    case .TAR: return try TarArchive(url: url)
+    default: return nil
+    }
+}

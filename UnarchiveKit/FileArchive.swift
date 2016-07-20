@@ -58,6 +58,7 @@ public func openFileArchive(url: URL) throws -> FileArchive {
     switch format {
     case .TAR: return try TarArchive(url: url)
     case .ZIP: return try ZipArchive(url: url)
+    case .RAR: return try RarArchive(url: url)
     default: throw FileArchiveError.UnknownArchiveFormat
     }
 }

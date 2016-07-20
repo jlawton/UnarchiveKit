@@ -37,14 +37,18 @@ public protocol ArchivedFileInfo {
     var path: ArchivedFilePath { get }
 }
 
-public func openFileArchive(url: URL) throws -> FileArchive? {
+public func openFileArchive(url: URL) throws -> FileArchive {
     guard let format = try guessFormatFromMagicBytes(url: url) else {
-        return nil
+        throw FileArchiveError.UnknownArchiveFormat
     }
 
     switch format {
     case .TAR: return try TarArchive(url: url)
     case .ZIP: return try ZipArchive(url: url)
-    default: return nil
+    default: throw FileArchiveError.UnknownArchiveFormat
     }
+}
+
+enum FileArchiveError: ErrorProtocol {
+    case UnknownArchiveFormat
 }

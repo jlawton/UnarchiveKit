@@ -94,25 +94,32 @@ int CALLBACK CallbackProc(UINT msg, long UserData, long P1, long P2) {
 }
 
 -(NSArray *) unrarListFiles {
-	int RHCode = 0, PFCode = 0;
+    return [self unrarListFilesWithDirectories:YES];
+}
 
-	if ([self _unrarOpenFile:filename inMode:RAR_OM_LIST_INCSPLIT withPassword:password] == NO)
+-(NSArray *) unrarListFilesWithDirectories:(BOOL)includeDirectories {
+    int RHCode = 0, PFCode = 0;
+
+    if ([self _unrarOpenFile:filename inMode:RAR_OM_LIST_INCSPLIT withPassword:password] == NO)
         return nil;
-	
-	NSMutableArray *files = [NSMutableArray array];
-	while ((RHCode = RARReadHeaderEx(_rarFile, header)) == 0) {
-    wchar_t *fileNameW = header->FileNameW;
-    NSString *_filename = [[NSString alloc] initWithBytes:fileNameW length:wcslen(fileNameW) * sizeof(*fileNameW) encoding:NSUTF32LittleEndianStringEncoding];
-		[files addObject:_filename];
-		
-		if ((PFCode = RARProcessFile(_rarFile, RAR_SKIP, NULL, NULL)) != 0) {
-			[self _unrarCloseFile];
-			return nil;
-		}
-	}
 
-	[self _unrarCloseFile];
-	return files;
+    NSMutableArray *files = [NSMutableArray array];
+    while ((RHCode = RARReadHeaderEx(_rarFile, header)) == 0) {
+        BOOL isDirectory = (header->Flags & 0xe0) == 0xe0;
+        if (includeDirectories || !isDirectory) {
+            wchar_t *fileNameW = header->FileNameW;
+            NSString *_filename = [[NSString alloc] initWithBytes:fileNameW length:wcslen(fileNameW) * sizeof(*fileNameW) encoding:NSUTF32LittleEndianStringEncoding];
+            [files addObject:_filename];
+        }
+
+        if ((PFCode = RARProcessFile(_rarFile, RAR_SKIP, NULL, NULL)) != 0) {
+            [self _unrarCloseFile];
+            return nil;
+        }
+    }
+    
+    [self _unrarCloseFile];
+    return files;
 }
 
 -(BOOL) unrarFileTo:(NSString*)path overWrite:(BOOL)overwrite {

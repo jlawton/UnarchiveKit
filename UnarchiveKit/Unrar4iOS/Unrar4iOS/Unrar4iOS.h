@@ -16,6 +16,7 @@
 -(BOOL) unrarOpenFile:(NSString*) rarFile;
 -(BOOL) unrarOpenFile:(NSString*) rarFile withPassword:(NSString*) aPassword;
 -(NSArray *) unrarListFiles;
+-(NSArray *) unrarListFilesWithDirectories:(BOOL)includeDirectories;
 -(BOOL) unrarFileTo:(NSString*)path overWrite:(BOOL)overwrite;
 -(NSData *) extractStream:(NSString *)aFile;
 -(BOOL) unrarCloseFile;

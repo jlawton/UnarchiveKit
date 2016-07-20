@@ -9,10 +9,14 @@
 import Foundation
 
 public struct ArchivedFilePath {
-    private let path: String
+    let path: String
 
     init(_ path: String) {
         self.path = path
+    }
+
+    public var fileName: String? {
+        return safeRelativePath?.components(separatedBy: "/").last
     }
 
     // This may not give a true representation of a path, but at least it

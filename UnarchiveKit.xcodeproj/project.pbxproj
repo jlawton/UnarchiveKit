@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1B4E471D3FF8A3000E7836 /* DirectoryArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B4E461D3FF8A3000E7836 /* DirectoryArchive.swift */; };
+		1A1B4E491D400A66000E7836 /* FileManager+UnarchiveKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B4E481D400A66000E7836 /* FileManager+UnarchiveKit.swift */; };
 		1A4FEDF11D3EA405000ADF27 /* UnarchiveKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4FEDF01D3EA405000ADF27 /* UnarchiveKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A4FEDF91D3EA5FE000ADF27 /* FileArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FEDF81D3EA5FE000ADF27 /* FileArchive.swift */; };
 		1A4FEDFB1D3EA9B2000ADF27 /* ArchiveFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FEDFA1D3EA9B2000ADF27 /* ArchiveFormats.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A1B4E461D3FF8A3000E7836 /* DirectoryArchive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryArchive.swift; sourceTree = "<group>"; };
+		1A1B4E481D400A66000E7836 /* FileManager+UnarchiveKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+UnarchiveKit.swift"; sourceTree = "<group>"; };
 		1A4FEDED1D3EA405000ADF27 /* UnarchiveKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnarchiveKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A4FEDF01D3EA405000ADF27 /* UnarchiveKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnarchiveKit.h; sourceTree = "<group>"; };
 		1A4FEDF21D3EA405000ADF27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A1B4E451D3FF885000E7836 /* File Directory */ = {
+			isa = PBXGroup;
+			children = (
+				1A1B4E461D3FF8A3000E7836 /* DirectoryArchive.swift */,
+			);
+			name = "File Directory";
+			sourceTree = "<group>";
+		};
 		1A4FEDE31D3EA405000ADF27 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +143,7 @@
 				1A90C6341D3F34F10081C7FE /* Utilities */,
 				1A90C62F1D3F29170081C7FE /* Tar */,
 				1A8D603B1D3F57DC00D48A7C /* Zip */,
+				1A1B4E451D3FF885000E7836 /* File Directory */,
 				1A4FEDF01D3EA405000ADF27 /* UnarchiveKit.h */,
 				1A4FEDF21D3EA405000ADF27 /* Info.plist */,
 				1A4FEDF81D3EA5FE000ADF27 /* FileArchive.swift */,
@@ -216,6 +229,7 @@
 				1ABF2A6F1D3FE0DF00E2E7F5 /* ArchivedFilePath+Patterns.swift */,
 				1A4FEDFA1D3EA9B2000ADF27 /* ArchiveFormats.swift */,
 				1A4FEDFE1D3EDE14000ADF27 /* InputStream+Data.swift */,
+				1A1B4E481D400A66000E7836 /* FileManager+UnarchiveKit.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -322,12 +336,14 @@
 				1A8D602B1D3F577E00D48A7C /* prng.c in Sources */,
 				1A8D60211D3F577E00D48A7C /* aestab.c in Sources */,
 				1A8D602F1D3F577E00D48A7C /* sha1.c in Sources */,
+				1A1B4E491D400A66000E7836 /* FileManager+UnarchiveKit.swift in Sources */,
 				1A4FEDF91D3EA5FE000ADF27 /* FileArchive.swift in Sources */,
 				1ABF2A701D3FE0DF00E2E7F5 /* ArchivedFilePath+Patterns.swift in Sources */,
 				1A90C6311D3F293A0081C7FE /* TarBlockHeader.swift in Sources */,
 				1A8D60321D3F577E00D48A7C /* ioapi.c in Sources */,
 				1A90C6361D3F36030081C7FE /* FileArchive+Defaults.swift in Sources */,
 				1A90C62E1D3F250B0081C7FE /* TarSource.swift in Sources */,
+				1A1B4E471D3FF8A3000E7836 /* DirectoryArchive.swift in Sources */,
 				1A4FEE011D3EFA0C000ADF27 /* ArchivedFilePath.swift in Sources */,
 				1A8D60271D3F577E00D48A7C /* fileenc.c in Sources */,
 				1A4FEDFD1D3ED4FA000ADF27 /* TarArchive.swift in Sources */,

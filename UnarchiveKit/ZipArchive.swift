@@ -96,10 +96,7 @@ final class ZipArchive: FileArchive {
             }
 
             let outputPath = try directory.appendingPathComponent(relativePath)
-
-            if let outputDirectory = try? outputPath.deletingLastPathComponent() {
-                try FileManager.default().createDirectory(at: outputDirectory, withIntermediateDirectories: true, attributes: nil)
-            }
+            try FileManager.default().createParentDirectory(url: outputPath)
 
             let data = try readCurrentFile(zip)
             try data.write(to: outputPath)

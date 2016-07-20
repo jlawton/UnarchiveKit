@@ -47,6 +47,10 @@ public protocol ArchivedFileInfo {
 }
 
 public func openFileArchive(url: URL) throws -> FileArchive {
+    if FileManager.default().isDirectory(url: url) {
+        return try DirectoryArchive(url: url)
+    }
+
     guard let format = try guessFormatFromMagicBytes(url: url) else {
         throw FileArchiveError.UnknownArchiveFormat
     }

@@ -51,11 +51,7 @@ public extension FileArchive {
         for file in try filesMatching(predicate) {
             if let relativePath = file.path.safeRelativePath {
                 let outputPath = try directory.appendingPathComponent(relativePath)
-
-                if let outputDirectory = try? outputPath.deletingLastPathComponent() {
-                    try FileManager.default().createDirectory(at: outputDirectory, withIntermediateDirectories: true, attributes: nil)
-                }
-
+                try FileManager.default().createParentDirectory(url: outputPath)
                 try extractFile(fileInfo: file, to: outputPath)
             }
         }

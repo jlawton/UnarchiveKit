@@ -9,7 +9,7 @@
 import Foundation
 import minizip
 
-class ZipArchive: FileArchive {
+final class ZipArchive: FileArchive {
 
     let zipURL: URL
 

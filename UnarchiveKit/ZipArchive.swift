@@ -72,6 +72,40 @@ class ZipArchive: FileArchive {
         return data
     }
 
+    // This should be faster than the default implementation
+    // but has different semantics w.r.t. corrupted archives
+    func extractFiles(toDirectory directory: URL, matching predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws {
+        try FileManager.default().createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
+
+        guard let zip = unzOpen64(zipURL.path!) else {
+            throw ZipArchiveError.ReadError
+        }
+        defer {
+            unzClose(zip)
+        }
+
+        try enumerateFiles(in: zip) { zip in
+            guard let fileInfo = try currentFileInfo(zip) else {
+                return
+            }
+            guard predicate(fileInfo: fileInfo) else {
+                return
+            }
+            guard let relativePath = fileInfo.path.safeRelativePath else {
+                return
+            }
+
+            let outputPath = try directory.appendingPathComponent(relativePath)
+
+            if let outputDirectory = try? outputPath.deletingLastPathComponent() {
+                try FileManager.default().createDirectory(at: outputDirectory, withIntermediateDirectories: true, attributes: nil)
+            }
+
+            let data = try readCurrentFile(zip)
+            try data.write(to: outputPath)
+        }
+    }
+
     // Private
 
     private func enumerateFiles(in zip: unzFile, block: @noescape (unzFile) throws -> Void) throws {

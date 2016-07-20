@@ -1,0 +1,1508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		480F5FC6128A069300A9B478 /* volume.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210EA1288B38C002745F2 /* volume.hpp */; };
+		480F5FC7128A06A600A9B478 /* volume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210E91288B38C002745F2 /* volume.cpp */; };
+		489CFA10128B5169005DCC2A /* Unrar4iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 489CFA0E128B5169005DCC2A /* Unrar4iOS.h */; };
+		489CFA11128B5169005DCC2A /* Unrar4iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 489CFA0F128B5169005DCC2A /* Unrar4iOS.mm */; };
+		48BB62EE1621C83D00B424E2 /* RARExtractException.h in Headers */ = {isa = PBXBuildFile; fileRef = 48BB62EC1621C83D00B424E2 /* RARExtractException.h */; };
+		48BB62EF1621C83D00B424E2 /* RARExtractException.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BB62ED1621C83D00B424E2 /* RARExtractException.m */; };
+		48F210EE1288B38C002745F2 /* archive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2106F1288B38C002745F2 /* archive.cpp */; };
+		48F210EF1288B38C002745F2 /* archive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210701288B38C002745F2 /* archive.hpp */; };
+		48F210F01288B38C002745F2 /* arcread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210711288B38C002745F2 /* arcread.cpp */; };
+		48F210F11288B38C002745F2 /* array.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210721288B38C002745F2 /* array.hpp */; };
+		48F210F31288B38C002745F2 /* cmddata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210741288B38C002745F2 /* cmddata.cpp */; };
+		48F210F41288B38C002745F2 /* cmddata.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210751288B38C002745F2 /* cmddata.hpp */; };
+		48F210F71288B38C002745F2 /* compress.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210781288B38C002745F2 /* compress.hpp */; };
+		48F210F81288B38C002745F2 /* consio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210791288B38C002745F2 /* consio.cpp */; };
+		48F210F91288B38C002745F2 /* consio.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2107A1288B38C002745F2 /* consio.hpp */; };
+		48F210FA1288B38C002745F2 /* crc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2107B1288B38C002745F2 /* crc.cpp */; };
+		48F210FB1288B38C002745F2 /* crc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2107C1288B38C002745F2 /* crc.hpp */; };
+		48F210FC1288B38C002745F2 /* crypt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2107D1288B38C002745F2 /* crypt.cpp */; };
+		48F210FD1288B38C002745F2 /* crypt.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2107E1288B38C002745F2 /* crypt.hpp */; };
+		48F210FE1288B38C002745F2 /* dll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2107F1288B38C002745F2 /* dll.cpp */; };
+		48F210FF1288B38C002745F2 /* dll.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210811288B38C002745F2 /* dll.hpp */; };
+		48F211001288B38C002745F2 /* encname.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210831288B38C002745F2 /* encname.cpp */; };
+		48F211011288B38C002745F2 /* encname.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210841288B38C002745F2 /* encname.hpp */; };
+		48F211021288B38C002745F2 /* errhnd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210851288B38C002745F2 /* errhnd.cpp */; };
+		48F211031288B38C002745F2 /* errhnd.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210861288B38C002745F2 /* errhnd.hpp */; };
+		48F211041288B38C002745F2 /* extinfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210871288B38C002745F2 /* extinfo.cpp */; };
+		48F211051288B38C002745F2 /* extinfo.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210881288B38C002745F2 /* extinfo.hpp */; };
+		48F211061288B38C002745F2 /* extract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210891288B38C002745F2 /* extract.cpp */; };
+		48F211071288B38C002745F2 /* extract.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2108A1288B38C002745F2 /* extract.hpp */; };
+		48F211081288B38C002745F2 /* filcreat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2108B1288B38C002745F2 /* filcreat.cpp */; };
+		48F211091288B38C002745F2 /* filcreat.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2108C1288B38C002745F2 /* filcreat.hpp */; };
+		48F2110A1288B38C002745F2 /* file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2108D1288B38C002745F2 /* file.cpp */; };
+		48F2110B1288B38C002745F2 /* file.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2108E1288B38C002745F2 /* file.hpp */; };
+		48F2110C1288B38C002745F2 /* filefn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2108F1288B38C002745F2 /* filefn.cpp */; };
+		48F2110D1288B38C002745F2 /* filefn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210901288B38C002745F2 /* filefn.hpp */; };
+		48F2110E1288B38C002745F2 /* filestr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210911288B38C002745F2 /* filestr.cpp */; };
+		48F2110F1288B38C002745F2 /* filestr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210921288B38C002745F2 /* filestr.hpp */; };
+		48F211101288B38C002745F2 /* find.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210931288B38C002745F2 /* find.cpp */; };
+		48F211111288B38C002745F2 /* find.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210941288B38C002745F2 /* find.hpp */; };
+		48F211121288B38C002745F2 /* getbits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210951288B38C002745F2 /* getbits.cpp */; };
+		48F211131288B38C002745F2 /* getbits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210961288B38C002745F2 /* getbits.hpp */; };
+		48F211141288B38C002745F2 /* global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210971288B38C002745F2 /* global.cpp */; };
+		48F211151288B38C002745F2 /* global.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210981288B38C002745F2 /* global.hpp */; };
+		48F211161288B38C002745F2 /* headers.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210991288B38C002745F2 /* headers.hpp */; };
+		48F211171288B38C002745F2 /* isnt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2109A1288B38C002745F2 /* isnt.cpp */; };
+		48F211181288B38C002745F2 /* isnt.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2109B1288B38C002745F2 /* isnt.hpp */; };
+		48F211191288B38C002745F2 /* list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2109D1288B38C002745F2 /* list.cpp */; };
+		48F2111A1288B38C002745F2 /* list.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2109E1288B38C002745F2 /* list.hpp */; };
+		48F2111B1288B38C002745F2 /* loclang.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2109F1288B38C002745F2 /* loclang.hpp */; };
+		48F2111D1288B38C002745F2 /* log.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210A11288B38C002745F2 /* log.hpp */; };
+		48F2111E1288B38C002745F2 /* match.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210A71288B38C002745F2 /* match.cpp */; };
+		48F2111F1288B38C002745F2 /* match.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210A81288B38C002745F2 /* match.hpp */; };
+		48F211221288B38C002745F2 /* options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210AC1288B38C002745F2 /* options.cpp */; };
+		48F211231288B38C002745F2 /* options.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210AD1288B38C002745F2 /* options.hpp */; };
+		48F211241288B38C002745F2 /* os.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210AE1288B38C002745F2 /* os.hpp */; };
+		48F211261288B38C002745F2 /* pathfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210B01288B38C002745F2 /* pathfn.cpp */; };
+		48F211271288B38C002745F2 /* pathfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B11288B38C002745F2 /* pathfn.hpp */; };
+		48F211281288B38C002745F2 /* rar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210B21288B38C002745F2 /* rar.cpp */; };
+		48F211291288B38C002745F2 /* rar.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B31288B38C002745F2 /* rar.hpp */; };
+		48F2112A1288B38C002745F2 /* rardefs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B41288B38C002745F2 /* rardefs.hpp */; };
+		48F2112B1288B38C002745F2 /* rarlang.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B51288B38C002745F2 /* rarlang.hpp */; };
+		48F2112C1288B38C002745F2 /* raros.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B61288B38C002745F2 /* raros.hpp */; };
+		48F2112E1288B38C002745F2 /* rartypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B81288B38C002745F2 /* rartypes.hpp */; };
+		48F2112F1288B38C002745F2 /* rarvm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210B91288B38C002745F2 /* rarvm.cpp */; };
+		48F211301288B38C002745F2 /* rarvm.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210BA1288B38C002745F2 /* rarvm.hpp */; };
+		48F211321288B38C002745F2 /* rawread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210BC1288B38C002745F2 /* rawread.cpp */; };
+		48F211331288B38C002745F2 /* rawread.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210BD1288B38C002745F2 /* rawread.hpp */; };
+		48F211341288B38C002745F2 /* rdwrfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210BE1288B38C002745F2 /* rdwrfn.cpp */; };
+		48F211351288B38C002745F2 /* rdwrfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210BF1288B38C002745F2 /* rdwrfn.hpp */; };
+		48F211361288B38C002745F2 /* recvol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210C21288B38C002745F2 /* recvol.cpp */; };
+		48F211371288B38C002745F2 /* recvol.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210C31288B38C002745F2 /* recvol.hpp */; };
+		48F211381288B38C002745F2 /* resource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210C41288B38C002745F2 /* resource.cpp */; };
+		48F2113A1288B38C002745F2 /* rijndael.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210C61288B38C002745F2 /* rijndael.cpp */; };
+		48F2113B1288B38C002745F2 /* rijndael.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210C71288B38C002745F2 /* rijndael.hpp */; };
+		48F2113C1288B38C002745F2 /* rs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210C81288B38C002745F2 /* rs.cpp */; };
+		48F2113D1288B38C002745F2 /* rs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210C91288B38C002745F2 /* rs.hpp */; };
+		48F2113E1288B38C002745F2 /* savepos.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210CA1288B38C002745F2 /* savepos.cpp */; };
+		48F2113F1288B38C002745F2 /* savepos.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210CB1288B38C002745F2 /* savepos.hpp */; };
+		48F211401288B38C002745F2 /* scantree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210CC1288B38C002745F2 /* scantree.cpp */; };
+		48F211411288B38C002745F2 /* scantree.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210CD1288B38C002745F2 /* scantree.hpp */; };
+		48F211421288B38C002745F2 /* sha1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210CE1288B38C002745F2 /* sha1.cpp */; };
+		48F211431288B38C002745F2 /* sha1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210CF1288B38C002745F2 /* sha1.hpp */; };
+		48F211441288B38C002745F2 /* smallfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210D01288B38C002745F2 /* smallfn.cpp */; };
+		48F211451288B38C002745F2 /* smallfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210D11288B38C002745F2 /* smallfn.hpp */; };
+		48F211461288B38C002745F2 /* strfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210D21288B38C002745F2 /* strfn.cpp */; };
+		48F211471288B38C002745F2 /* strfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210D31288B38C002745F2 /* strfn.hpp */; };
+		48F211481288B38C002745F2 /* strlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210D41288B38C002745F2 /* strlist.cpp */; };
+		48F211491288B38C002745F2 /* strlist.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210D51288B38C002745F2 /* strlist.hpp */; };
+		48F2114C1288B38C002745F2 /* system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210D81288B38C002745F2 /* system.cpp */; };
+		48F2114D1288B38C002745F2 /* system.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210D91288B38C002745F2 /* system.hpp */; };
+		48F2114E1288B38C002745F2 /* timefn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210DA1288B38C002745F2 /* timefn.cpp */; };
+		48F2114F1288B38C002745F2 /* timefn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210DB1288B38C002745F2 /* timefn.hpp */; };
+		48F211501288B38C002745F2 /* ulinks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210DC1288B38C002745F2 /* ulinks.cpp */; };
+		48F211511288B38C002745F2 /* ulinks.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210DD1288B38C002745F2 /* ulinks.hpp */; };
+		48F211521288B38C002745F2 /* unicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210DE1288B38C002745F2 /* unicode.cpp */; };
+		48F211531288B38C002745F2 /* unicode.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210DF1288B38C002745F2 /* unicode.hpp */; };
+		48F211551288B38C002745F2 /* unpack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210E11288B38C002745F2 /* unpack.cpp */; };
+		48F211561288B38C002745F2 /* unpack.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210E21288B38C002745F2 /* unpack.hpp */; };
+		48F2115A1288B38C002745F2 /* version.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210E81288B38C002745F2 /* version.hpp */; };
+		65E1852B1A2250C500830805 /* UnrarFW4iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E1852A1A2250C500830805 /* UnrarFW4iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65E185491A2250DA00830805 /* UnrarFW4OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E185481A2250DA00830805 /* UnrarFW4OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65E1855D1A22512000830805 /* Unrar4iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 489CFA0E128B5169005DCC2A /* Unrar4iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65E1855E1A22512000830805 /* RARExtractException.h in Headers */ = {isa = PBXBuildFile; fileRef = 48BB62EC1621C83D00B424E2 /* RARExtractException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65E1855F1A22512000830805 /* Unrar4iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 489CFA0E128B5169005DCC2A /* Unrar4iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65E185601A22512000830805 /* RARExtractException.h in Headers */ = {isa = PBXBuildFile; fileRef = 48BB62EC1621C83D00B424E2 /* RARExtractException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65E185611A22512600830805 /* Unrar4iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 489CFA0F128B5169005DCC2A /* Unrar4iOS.mm */; };
+		65E185621A22512600830805 /* RARExtractException.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BB62ED1621C83D00B424E2 /* RARExtractException.m */; };
+		65E185631A22512700830805 /* Unrar4iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 489CFA0F128B5169005DCC2A /* Unrar4iOS.mm */; };
+		65E185641A22512700830805 /* RARExtractException.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BB62ED1621C83D00B424E2 /* RARExtractException.m */; };
+		65E185661A22513500830805 /* archive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2106F1288B38C002745F2 /* archive.cpp */; };
+		65E185671A22513500830805 /* archive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210701288B38C002745F2 /* archive.hpp */; };
+		65E185681A22513500830805 /* arcread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210711288B38C002745F2 /* arcread.cpp */; };
+		65E185691A22513500830805 /* array.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210721288B38C002745F2 /* array.hpp */; };
+		65E1856B1A22513500830805 /* cmddata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210741288B38C002745F2 /* cmddata.cpp */; };
+		65E1856C1A22513500830805 /* cmddata.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210751288B38C002745F2 /* cmddata.hpp */; };
+		65E1856F1A22513500830805 /* compress.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210781288B38C002745F2 /* compress.hpp */; };
+		65E185701A22513500830805 /* consio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210791288B38C002745F2 /* consio.cpp */; };
+		65E185711A22513500830805 /* consio.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2107A1288B38C002745F2 /* consio.hpp */; };
+		65E185721A22513500830805 /* crc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2107B1288B38C002745F2 /* crc.cpp */; };
+		65E185731A22513500830805 /* crc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2107C1288B38C002745F2 /* crc.hpp */; };
+		65E185741A22513500830805 /* crypt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2107D1288B38C002745F2 /* crypt.cpp */; };
+		65E185751A22513500830805 /* crypt.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2107E1288B38C002745F2 /* crypt.hpp */; };
+		65E185761A22513500830805 /* dll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2107F1288B38C002745F2 /* dll.cpp */; };
+		65E185781A22513500830805 /* dll.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210811288B38C002745F2 /* dll.hpp */; };
+		65E1857A1A22513500830805 /* encname.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210831288B38C002745F2 /* encname.cpp */; };
+		65E1857B1A22513500830805 /* encname.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210841288B38C002745F2 /* encname.hpp */; };
+		65E1857C1A22513500830805 /* errhnd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210851288B38C002745F2 /* errhnd.cpp */; };
+		65E1857D1A22513500830805 /* errhnd.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210861288B38C002745F2 /* errhnd.hpp */; };
+		65E1857E1A22513500830805 /* extinfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210871288B38C002745F2 /* extinfo.cpp */; };
+		65E1857F1A22513500830805 /* extinfo.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210881288B38C002745F2 /* extinfo.hpp */; };
+		65E185801A22513500830805 /* extract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210891288B38C002745F2 /* extract.cpp */; };
+		65E185811A22513500830805 /* extract.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2108A1288B38C002745F2 /* extract.hpp */; };
+		65E185821A22513500830805 /* filcreat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2108B1288B38C002745F2 /* filcreat.cpp */; };
+		65E185831A22513500830805 /* filcreat.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2108C1288B38C002745F2 /* filcreat.hpp */; };
+		65E185841A22513500830805 /* file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2108D1288B38C002745F2 /* file.cpp */; };
+		65E185851A22513500830805 /* file.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2108E1288B38C002745F2 /* file.hpp */; };
+		65E185861A22513500830805 /* filefn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2108F1288B38C002745F2 /* filefn.cpp */; };
+		65E185871A22513500830805 /* filefn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210901288B38C002745F2 /* filefn.hpp */; };
+		65E185881A22513500830805 /* filestr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210911288B38C002745F2 /* filestr.cpp */; };
+		65E185891A22513500830805 /* filestr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210921288B38C002745F2 /* filestr.hpp */; };
+		65E1858A1A22513500830805 /* find.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210931288B38C002745F2 /* find.cpp */; };
+		65E1858B1A22513500830805 /* find.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210941288B38C002745F2 /* find.hpp */; };
+		65E1858C1A22513500830805 /* getbits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210951288B38C002745F2 /* getbits.cpp */; };
+		65E1858D1A22513500830805 /* getbits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210961288B38C002745F2 /* getbits.hpp */; };
+		65E1858E1A22513500830805 /* global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210971288B38C002745F2 /* global.cpp */; };
+		65E1858F1A22513500830805 /* global.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210981288B38C002745F2 /* global.hpp */; };
+		65E185901A22513500830805 /* headers.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210991288B38C002745F2 /* headers.hpp */; };
+		65E185911A22513500830805 /* isnt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2109A1288B38C002745F2 /* isnt.cpp */; };
+		65E185921A22513500830805 /* isnt.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2109B1288B38C002745F2 /* isnt.hpp */; };
+		65E185941A22513500830805 /* list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2109D1288B38C002745F2 /* list.cpp */; };
+		65E185951A22513500830805 /* list.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2109E1288B38C002745F2 /* list.hpp */; };
+		65E185961A22513500830805 /* loclang.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2109F1288B38C002745F2 /* loclang.hpp */; };
+		65E185981A22513500830805 /* log.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210A11288B38C002745F2 /* log.hpp */; };
+		65E1859D1A22513500830805 /* match.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210A71288B38C002745F2 /* match.cpp */; };
+		65E1859E1A22513500830805 /* match.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210A81288B38C002745F2 /* match.hpp */; };
+		65E185A21A22513500830805 /* options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210AC1288B38C002745F2 /* options.cpp */; };
+		65E185A31A22513500830805 /* options.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210AD1288B38C002745F2 /* options.hpp */; };
+		65E185A41A22513500830805 /* os.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210AE1288B38C002745F2 /* os.hpp */; };
+		65E185A61A22513500830805 /* pathfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210B01288B38C002745F2 /* pathfn.cpp */; };
+		65E185A71A22513500830805 /* pathfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B11288B38C002745F2 /* pathfn.hpp */; };
+		65E185A81A22513500830805 /* rar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210B21288B38C002745F2 /* rar.cpp */; };
+		65E185A91A22513500830805 /* rar.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B31288B38C002745F2 /* rar.hpp */; };
+		65E185AA1A22513500830805 /* rardefs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B41288B38C002745F2 /* rardefs.hpp */; };
+		65E185AB1A22513500830805 /* rarlang.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B51288B38C002745F2 /* rarlang.hpp */; };
+		65E185AC1A22513500830805 /* raros.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B61288B38C002745F2 /* raros.hpp */; };
+		65E185AE1A22513500830805 /* rartypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B81288B38C002745F2 /* rartypes.hpp */; };
+		65E185AF1A22513500830805 /* rarvm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210B91288B38C002745F2 /* rarvm.cpp */; };
+		65E185B01A22513500830805 /* rarvm.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210BA1288B38C002745F2 /* rarvm.hpp */; };
+		65E185B21A22513500830805 /* rawread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210BC1288B38C002745F2 /* rawread.cpp */; };
+		65E185B31A22513500830805 /* rawread.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210BD1288B38C002745F2 /* rawread.hpp */; };
+		65E185B41A22513500830805 /* rdwrfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210BE1288B38C002745F2 /* rdwrfn.cpp */; };
+		65E185B51A22513500830805 /* rdwrfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210BF1288B38C002745F2 /* rdwrfn.hpp */; };
+		65E185B71A22513500830805 /* recvol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210C21288B38C002745F2 /* recvol.cpp */; };
+		65E185B81A22513500830805 /* recvol.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210C31288B38C002745F2 /* recvol.hpp */; };
+		65E185B91A22513500830805 /* resource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210C41288B38C002745F2 /* resource.cpp */; };
+		65E185BB1A22513500830805 /* rijndael.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210C61288B38C002745F2 /* rijndael.cpp */; };
+		65E185BC1A22513500830805 /* rijndael.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210C71288B38C002745F2 /* rijndael.hpp */; };
+		65E185BD1A22513500830805 /* rs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210C81288B38C002745F2 /* rs.cpp */; };
+		65E185BE1A22513500830805 /* rs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210C91288B38C002745F2 /* rs.hpp */; };
+		65E185BF1A22513500830805 /* savepos.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210CA1288B38C002745F2 /* savepos.cpp */; };
+		65E185C01A22513500830805 /* savepos.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210CB1288B38C002745F2 /* savepos.hpp */; };
+		65E185C11A22513500830805 /* scantree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210CC1288B38C002745F2 /* scantree.cpp */; };
+		65E185C21A22513500830805 /* scantree.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210CD1288B38C002745F2 /* scantree.hpp */; };
+		65E185C31A22513500830805 /* secpassword.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6792C9816974622006F1B41 /* secpassword.cpp */; };
+		65E185C41A22513500830805 /* secpassword.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A6792C9916974622006F1B41 /* secpassword.hpp */; };
+		65E185C51A22513500830805 /* sha1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210CE1288B38C002745F2 /* sha1.cpp */; };
+		65E185C61A22513500830805 /* sha1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210CF1288B38C002745F2 /* sha1.hpp */; };
+		65E185C71A22513500830805 /* smallfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210D01288B38C002745F2 /* smallfn.cpp */; };
+		65E185C81A22513500830805 /* smallfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210D11288B38C002745F2 /* smallfn.hpp */; };
+		65E185C91A22513500830805 /* strfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210D21288B38C002745F2 /* strfn.cpp */; };
+		65E185CA1A22513500830805 /* strfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210D31288B38C002745F2 /* strfn.hpp */; };
+		65E185CB1A22513500830805 /* strlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210D41288B38C002745F2 /* strlist.cpp */; };
+		65E185CC1A22513500830805 /* strlist.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210D51288B38C002745F2 /* strlist.hpp */; };
+		65E185CF1A22513500830805 /* system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210D81288B38C002745F2 /* system.cpp */; };
+		65E185D01A22513500830805 /* system.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210D91288B38C002745F2 /* system.hpp */; };
+		65E185D11A22513500830805 /* timefn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210DA1288B38C002745F2 /* timefn.cpp */; };
+		65E185D21A22513500830805 /* timefn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210DB1288B38C002745F2 /* timefn.hpp */; };
+		65E185D31A22513500830805 /* ulinks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210DC1288B38C002745F2 /* ulinks.cpp */; };
+		65E185D41A22513500830805 /* ulinks.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210DD1288B38C002745F2 /* ulinks.hpp */; };
+		65E185D51A22513500830805 /* unicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210DE1288B38C002745F2 /* unicode.cpp */; };
+		65E185D61A22513500830805 /* unicode.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210DF1288B38C002745F2 /* unicode.hpp */; };
+		65E185D81A22513500830805 /* unpack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210E11288B38C002745F2 /* unpack.cpp */; };
+		65E185D91A22513500830805 /* unpack.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210E21288B38C002745F2 /* unpack.hpp */; };
+		65E185DD1A22513500830805 /* version.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210E81288B38C002745F2 /* version.hpp */; };
+		65E185DE1A22513500830805 /* volume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210E91288B38C002745F2 /* volume.cpp */; };
+		65E185DF1A22513500830805 /* volume.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210EA1288B38C002745F2 /* volume.hpp */; };
+		65E185E31A22513600830805 /* archive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2106F1288B38C002745F2 /* archive.cpp */; };
+		65E185E41A22513600830805 /* archive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210701288B38C002745F2 /* archive.hpp */; };
+		65E185E51A22513600830805 /* arcread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210711288B38C002745F2 /* arcread.cpp */; };
+		65E185E61A22513600830805 /* array.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210721288B38C002745F2 /* array.hpp */; };
+		65E185E81A22513600830805 /* cmddata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210741288B38C002745F2 /* cmddata.cpp */; };
+		65E185E91A22513600830805 /* cmddata.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210751288B38C002745F2 /* cmddata.hpp */; };
+		65E185EC1A22513600830805 /* compress.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210781288B38C002745F2 /* compress.hpp */; };
+		65E185ED1A22513600830805 /* consio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210791288B38C002745F2 /* consio.cpp */; };
+		65E185EE1A22513600830805 /* consio.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2107A1288B38C002745F2 /* consio.hpp */; };
+		65E185EF1A22513600830805 /* crc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2107B1288B38C002745F2 /* crc.cpp */; };
+		65E185F01A22513600830805 /* crc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2107C1288B38C002745F2 /* crc.hpp */; };
+		65E185F11A22513600830805 /* crypt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2107D1288B38C002745F2 /* crypt.cpp */; };
+		65E185F21A22513600830805 /* crypt.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2107E1288B38C002745F2 /* crypt.hpp */; };
+		65E185F31A22513600830805 /* dll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2107F1288B38C002745F2 /* dll.cpp */; };
+		65E185F51A22513600830805 /* dll.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210811288B38C002745F2 /* dll.hpp */; };
+		65E185F71A22513600830805 /* encname.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210831288B38C002745F2 /* encname.cpp */; };
+		65E185F81A22513600830805 /* encname.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210841288B38C002745F2 /* encname.hpp */; };
+		65E185F91A22513600830805 /* errhnd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210851288B38C002745F2 /* errhnd.cpp */; };
+		65E185FA1A22513600830805 /* errhnd.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210861288B38C002745F2 /* errhnd.hpp */; };
+		65E185FB1A22513600830805 /* extinfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210871288B38C002745F2 /* extinfo.cpp */; };
+		65E185FC1A22513600830805 /* extinfo.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210881288B38C002745F2 /* extinfo.hpp */; };
+		65E185FD1A22513600830805 /* extract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210891288B38C002745F2 /* extract.cpp */; };
+		65E185FE1A22513600830805 /* extract.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2108A1288B38C002745F2 /* extract.hpp */; };
+		65E185FF1A22513600830805 /* filcreat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2108B1288B38C002745F2 /* filcreat.cpp */; };
+		65E186001A22513600830805 /* filcreat.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2108C1288B38C002745F2 /* filcreat.hpp */; };
+		65E186011A22513600830805 /* file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2108D1288B38C002745F2 /* file.cpp */; };
+		65E186021A22513600830805 /* file.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2108E1288B38C002745F2 /* file.hpp */; };
+		65E186031A22513600830805 /* filefn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2108F1288B38C002745F2 /* filefn.cpp */; };
+		65E186041A22513600830805 /* filefn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210901288B38C002745F2 /* filefn.hpp */; };
+		65E186051A22513600830805 /* filestr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210911288B38C002745F2 /* filestr.cpp */; };
+		65E186061A22513600830805 /* filestr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210921288B38C002745F2 /* filestr.hpp */; };
+		65E186071A22513600830805 /* find.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210931288B38C002745F2 /* find.cpp */; };
+		65E186081A22513600830805 /* find.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210941288B38C002745F2 /* find.hpp */; };
+		65E186091A22513600830805 /* getbits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210951288B38C002745F2 /* getbits.cpp */; };
+		65E1860A1A22513600830805 /* getbits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210961288B38C002745F2 /* getbits.hpp */; };
+		65E1860B1A22513600830805 /* global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210971288B38C002745F2 /* global.cpp */; };
+		65E1860C1A22513600830805 /* global.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210981288B38C002745F2 /* global.hpp */; };
+		65E1860D1A22513600830805 /* headers.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210991288B38C002745F2 /* headers.hpp */; };
+		65E1860E1A22513600830805 /* isnt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2109A1288B38C002745F2 /* isnt.cpp */; };
+		65E1860F1A22513600830805 /* isnt.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2109B1288B38C002745F2 /* isnt.hpp */; };
+		65E186111A22513600830805 /* list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F2109D1288B38C002745F2 /* list.cpp */; };
+		65E186121A22513600830805 /* list.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2109E1288B38C002745F2 /* list.hpp */; };
+		65E186131A22513600830805 /* loclang.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F2109F1288B38C002745F2 /* loclang.hpp */; };
+		65E186151A22513600830805 /* log.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210A11288B38C002745F2 /* log.hpp */; };
+		65E1861A1A22513600830805 /* match.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210A71288B38C002745F2 /* match.cpp */; };
+		65E1861B1A22513600830805 /* match.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210A81288B38C002745F2 /* match.hpp */; };
+		65E1861F1A22513600830805 /* options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210AC1288B38C002745F2 /* options.cpp */; };
+		65E186201A22513600830805 /* options.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210AD1288B38C002745F2 /* options.hpp */; };
+		65E186211A22513600830805 /* os.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210AE1288B38C002745F2 /* os.hpp */; };
+		65E186231A22513600830805 /* pathfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210B01288B38C002745F2 /* pathfn.cpp */; };
+		65E186241A22513600830805 /* pathfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B11288B38C002745F2 /* pathfn.hpp */; };
+		65E186251A22513600830805 /* rar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210B21288B38C002745F2 /* rar.cpp */; };
+		65E186261A22513600830805 /* rar.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B31288B38C002745F2 /* rar.hpp */; };
+		65E186271A22513600830805 /* rardefs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B41288B38C002745F2 /* rardefs.hpp */; };
+		65E186281A22513600830805 /* rarlang.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B51288B38C002745F2 /* rarlang.hpp */; };
+		65E186291A22513600830805 /* raros.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B61288B38C002745F2 /* raros.hpp */; };
+		65E1862B1A22513600830805 /* rartypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210B81288B38C002745F2 /* rartypes.hpp */; };
+		65E1862C1A22513600830805 /* rarvm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210B91288B38C002745F2 /* rarvm.cpp */; };
+		65E1862D1A22513600830805 /* rarvm.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210BA1288B38C002745F2 /* rarvm.hpp */; };
+		65E1862F1A22513600830805 /* rawread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210BC1288B38C002745F2 /* rawread.cpp */; };
+		65E186301A22513600830805 /* rawread.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210BD1288B38C002745F2 /* rawread.hpp */; };
+		65E186311A22513600830805 /* rdwrfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210BE1288B38C002745F2 /* rdwrfn.cpp */; };
+		65E186321A22513600830805 /* rdwrfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210BF1288B38C002745F2 /* rdwrfn.hpp */; };
+		65E186341A22513600830805 /* recvol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210C21288B38C002745F2 /* recvol.cpp */; };
+		65E186351A22513600830805 /* recvol.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210C31288B38C002745F2 /* recvol.hpp */; };
+		65E186361A22513600830805 /* resource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210C41288B38C002745F2 /* resource.cpp */; };
+		65E186381A22513600830805 /* rijndael.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210C61288B38C002745F2 /* rijndael.cpp */; };
+		65E186391A22513600830805 /* rijndael.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210C71288B38C002745F2 /* rijndael.hpp */; };
+		65E1863A1A22513600830805 /* rs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210C81288B38C002745F2 /* rs.cpp */; };
+		65E1863B1A22513600830805 /* rs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210C91288B38C002745F2 /* rs.hpp */; };
+		65E1863C1A22513600830805 /* savepos.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210CA1288B38C002745F2 /* savepos.cpp */; };
+		65E1863D1A22513600830805 /* savepos.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210CB1288B38C002745F2 /* savepos.hpp */; };
+		65E1863E1A22513600830805 /* scantree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210CC1288B38C002745F2 /* scantree.cpp */; };
+		65E1863F1A22513600830805 /* scantree.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210CD1288B38C002745F2 /* scantree.hpp */; };
+		65E186401A22513600830805 /* secpassword.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6792C9816974622006F1B41 /* secpassword.cpp */; };
+		65E186411A22513600830805 /* secpassword.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A6792C9916974622006F1B41 /* secpassword.hpp */; };
+		65E186421A22513600830805 /* sha1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210CE1288B38C002745F2 /* sha1.cpp */; };
+		65E186431A22513600830805 /* sha1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210CF1288B38C002745F2 /* sha1.hpp */; };
+		65E186441A22513600830805 /* smallfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210D01288B38C002745F2 /* smallfn.cpp */; };
+		65E186451A22513600830805 /* smallfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210D11288B38C002745F2 /* smallfn.hpp */; };
+		65E186461A22513600830805 /* strfn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210D21288B38C002745F2 /* strfn.cpp */; };
+		65E186471A22513600830805 /* strfn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210D31288B38C002745F2 /* strfn.hpp */; };
+		65E186481A22513600830805 /* strlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210D41288B38C002745F2 /* strlist.cpp */; };
+		65E186491A22513600830805 /* strlist.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210D51288B38C002745F2 /* strlist.hpp */; };
+		65E1864C1A22513600830805 /* system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210D81288B38C002745F2 /* system.cpp */; };
+		65E1864D1A22513600830805 /* system.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210D91288B38C002745F2 /* system.hpp */; };
+		65E1864E1A22513600830805 /* timefn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210DA1288B38C002745F2 /* timefn.cpp */; };
+		65E1864F1A22513600830805 /* timefn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210DB1288B38C002745F2 /* timefn.hpp */; };
+		65E186501A22513600830805 /* ulinks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210DC1288B38C002745F2 /* ulinks.cpp */; };
+		65E186511A22513600830805 /* ulinks.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210DD1288B38C002745F2 /* ulinks.hpp */; };
+		65E186521A22513600830805 /* unicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210DE1288B38C002745F2 /* unicode.cpp */; };
+		65E186531A22513600830805 /* unicode.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210DF1288B38C002745F2 /* unicode.hpp */; };
+		65E186551A22513600830805 /* unpack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210E11288B38C002745F2 /* unpack.cpp */; };
+		65E186561A22513600830805 /* unpack.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210E21288B38C002745F2 /* unpack.hpp */; };
+		65E1865A1A22513600830805 /* version.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210E81288B38C002745F2 /* version.hpp */; };
+		65E1865B1A22513600830805 /* volume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48F210E91288B38C002745F2 /* volume.cpp */; };
+		65E1865C1A22513600830805 /* volume.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48F210EA1288B38C002745F2 /* volume.hpp */; };
+		65E186741A225F3000830805 /* coder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 65E186631A225F3000830805 /* coder.hpp */; };
+		65E186751A225F3000830805 /* coder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 65E186631A225F3000830805 /* coder.hpp */; };
+		65E186761A225F3000830805 /* coder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 65E186631A225F3000830805 /* coder.hpp */; };
+		65E1867D1A225F3000830805 /* model.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 65E186661A225F3000830805 /* model.hpp */; };
+		65E1867E1A225F3000830805 /* model.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 65E186661A225F3000830805 /* model.hpp */; };
+		65E1867F1A225F3000830805 /* model.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 65E186661A225F3000830805 /* model.hpp */; };
+		65E186831A225F3000830805 /* resource.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 65E186681A225F3000830805 /* resource.hpp */; };
+		65E186841A225F3000830805 /* resource.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 65E186681A225F3000830805 /* resource.hpp */; };
+		65E186851A225F3000830805 /* resource.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 65E186681A225F3000830805 /* resource.hpp */; };
+		65E186891A225F3000830805 /* suballoc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 65E1866A1A225F3000830805 /* suballoc.hpp */; };
+		65E1868A1A225F3000830805 /* suballoc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 65E1866A1A225F3000830805 /* suballoc.hpp */; };
+		65E1868B1A225F3000830805 /* suballoc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 65E1866A1A225F3000830805 /* suballoc.hpp */; };
+		65E1869B1A233FE900830805 /* arccmt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E1869A1A233FE900830805 /* arccmt.cpp */; };
+		65E1869C1A233FE900830805 /* arccmt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E1869A1A233FE900830805 /* arccmt.cpp */; };
+		65E1869D1A233FE900830805 /* arccmt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E1869A1A233FE900830805 /* arccmt.cpp */; };
+		A6792C9A16974622006F1B41 /* secpassword.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6792C9816974622006F1B41 /* secpassword.cpp */; };
+		A6792C9B16974622006F1B41 /* secpassword.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A6792C9916974622006F1B41 /* secpassword.hpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		489CFA0E128B5169005DCC2A /* Unrar4iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unrar4iOS.h; sourceTree = "<group>"; };
+		489CFA0F128B5169005DCC2A /* Unrar4iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Unrar4iOS.mm; sourceTree = "<group>"; };
+		48BB62EC1621C83D00B424E2 /* RARExtractException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RARExtractException.h; sourceTree = "<group>"; };
+		48BB62ED1621C83D00B424E2 /* RARExtractException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RARExtractException.m; sourceTree = "<group>"; };
+		48F2106F1288B38C002745F2 /* archive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = archive.cpp; sourceTree = "<group>"; };
+		48F210701288B38C002745F2 /* archive.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = archive.hpp; sourceTree = "<group>"; };
+		48F210711288B38C002745F2 /* arcread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arcread.cpp; sourceTree = "<group>"; };
+		48F210721288B38C002745F2 /* array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = array.hpp; sourceTree = "<group>"; };
+		48F210741288B38C002745F2 /* cmddata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cmddata.cpp; sourceTree = "<group>"; };
+		48F210751288B38C002745F2 /* cmddata.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cmddata.hpp; sourceTree = "<group>"; };
+		48F210781288B38C002745F2 /* compress.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = compress.hpp; sourceTree = "<group>"; };
+		48F210791288B38C002745F2 /* consio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = consio.cpp; sourceTree = "<group>"; };
+		48F2107A1288B38C002745F2 /* consio.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = consio.hpp; sourceTree = "<group>"; };
+		48F2107B1288B38C002745F2 /* crc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = crc.cpp; sourceTree = "<group>"; };
+		48F2107C1288B38C002745F2 /* crc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = crc.hpp; sourceTree = "<group>"; };
+		48F2107D1288B38C002745F2 /* crypt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = crypt.cpp; sourceTree = "<group>"; };
+		48F2107E1288B38C002745F2 /* crypt.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = crypt.hpp; sourceTree = "<group>"; };
+		48F2107F1288B38C002745F2 /* dll.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dll.cpp; sourceTree = "<group>"; };
+		48F210811288B38C002745F2 /* dll.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dll.hpp; sourceTree = "<group>"; };
+		48F210831288B38C002745F2 /* encname.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = encname.cpp; sourceTree = "<group>"; };
+		48F210841288B38C002745F2 /* encname.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = encname.hpp; sourceTree = "<group>"; };
+		48F210851288B38C002745F2 /* errhnd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = errhnd.cpp; sourceTree = "<group>"; };
+		48F210861288B38C002745F2 /* errhnd.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = errhnd.hpp; sourceTree = "<group>"; };
+		48F210871288B38C002745F2 /* extinfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = extinfo.cpp; sourceTree = "<group>"; };
+		48F210881288B38C002745F2 /* extinfo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = extinfo.hpp; sourceTree = "<group>"; };
+		48F210891288B38C002745F2 /* extract.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = extract.cpp; sourceTree = "<group>"; };
+		48F2108A1288B38C002745F2 /* extract.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = extract.hpp; sourceTree = "<group>"; };
+		48F2108B1288B38C002745F2 /* filcreat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = filcreat.cpp; sourceTree = "<group>"; };
+		48F2108C1288B38C002745F2 /* filcreat.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = filcreat.hpp; sourceTree = "<group>"; };
+		48F2108D1288B38C002745F2 /* file.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = file.cpp; sourceTree = "<group>"; };
+		48F2108E1288B38C002745F2 /* file.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = file.hpp; sourceTree = "<group>"; };
+		48F2108F1288B38C002745F2 /* filefn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = filefn.cpp; sourceTree = "<group>"; };
+		48F210901288B38C002745F2 /* filefn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = filefn.hpp; sourceTree = "<group>"; };
+		48F210911288B38C002745F2 /* filestr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = filestr.cpp; sourceTree = "<group>"; };
+		48F210921288B38C002745F2 /* filestr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = filestr.hpp; sourceTree = "<group>"; };
+		48F210931288B38C002745F2 /* find.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = find.cpp; sourceTree = "<group>"; };
+		48F210941288B38C002745F2 /* find.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = find.hpp; sourceTree = "<group>"; };
+		48F210951288B38C002745F2 /* getbits.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = getbits.cpp; sourceTree = "<group>"; };
+		48F210961288B38C002745F2 /* getbits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = getbits.hpp; sourceTree = "<group>"; };
+		48F210971288B38C002745F2 /* global.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = global.cpp; sourceTree = "<group>"; };
+		48F210981288B38C002745F2 /* global.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = global.hpp; sourceTree = "<group>"; };
+		48F210991288B38C002745F2 /* headers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = headers.hpp; sourceTree = "<group>"; };
+		48F2109A1288B38C002745F2 /* isnt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = isnt.cpp; sourceTree = "<group>"; };
+		48F2109B1288B38C002745F2 /* isnt.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = isnt.hpp; sourceTree = "<group>"; };
+		48F2109C1288B38C002745F2 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
+		48F2109D1288B38C002745F2 /* list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = list.cpp; sourceTree = "<group>"; };
+		48F2109E1288B38C002745F2 /* list.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = list.hpp; sourceTree = "<group>"; };
+		48F2109F1288B38C002745F2 /* loclang.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = loclang.hpp; sourceTree = "<group>"; };
+		48F210A11288B38C002745F2 /* log.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = log.hpp; sourceTree = "<group>"; };
+		48F210A71288B38C002745F2 /* match.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = match.cpp; sourceTree = "<group>"; };
+		48F210A81288B38C002745F2 /* match.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = match.hpp; sourceTree = "<group>"; };
+		48F210AC1288B38C002745F2 /* options.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = options.cpp; sourceTree = "<group>"; };
+		48F210AD1288B38C002745F2 /* options.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = options.hpp; sourceTree = "<group>"; };
+		48F210AE1288B38C002745F2 /* os.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = os.hpp; sourceTree = "<group>"; };
+		48F210B01288B38C002745F2 /* pathfn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pathfn.cpp; sourceTree = "<group>"; };
+		48F210B11288B38C002745F2 /* pathfn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pathfn.hpp; sourceTree = "<group>"; };
+		48F210B21288B38C002745F2 /* rar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rar.cpp; sourceTree = "<group>"; };
+		48F210B31288B38C002745F2 /* rar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rar.hpp; sourceTree = "<group>"; };
+		48F210B41288B38C002745F2 /* rardefs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rardefs.hpp; sourceTree = "<group>"; };
+		48F210B51288B38C002745F2 /* rarlang.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rarlang.hpp; sourceTree = "<group>"; };
+		48F210B61288B38C002745F2 /* raros.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = raros.hpp; sourceTree = "<group>"; };
+		48F210B81288B38C002745F2 /* rartypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rartypes.hpp; sourceTree = "<group>"; };
+		48F210B91288B38C002745F2 /* rarvm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rarvm.cpp; sourceTree = "<group>"; };
+		48F210BA1288B38C002745F2 /* rarvm.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rarvm.hpp; sourceTree = "<group>"; };
+		48F210BC1288B38C002745F2 /* rawread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rawread.cpp; sourceTree = "<group>"; };
+		48F210BD1288B38C002745F2 /* rawread.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rawread.hpp; sourceTree = "<group>"; };
+		48F210BE1288B38C002745F2 /* rdwrfn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rdwrfn.cpp; sourceTree = "<group>"; };
+		48F210BF1288B38C002745F2 /* rdwrfn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rdwrfn.hpp; sourceTree = "<group>"; };
+		48F210C11288B38C002745F2 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		48F210C21288B38C002745F2 /* recvol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = recvol.cpp; sourceTree = "<group>"; };
+		48F210C31288B38C002745F2 /* recvol.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = recvol.hpp; sourceTree = "<group>"; };
+		48F210C41288B38C002745F2 /* resource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resource.cpp; sourceTree = "<group>"; };
+		48F210C61288B38C002745F2 /* rijndael.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rijndael.cpp; sourceTree = "<group>"; };
+		48F210C71288B38C002745F2 /* rijndael.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rijndael.hpp; sourceTree = "<group>"; };
+		48F210C81288B38C002745F2 /* rs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rs.cpp; sourceTree = "<group>"; };
+		48F210C91288B38C002745F2 /* rs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rs.hpp; sourceTree = "<group>"; };
+		48F210CA1288B38C002745F2 /* savepos.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = savepos.cpp; sourceTree = "<group>"; };
+		48F210CB1288B38C002745F2 /* savepos.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = savepos.hpp; sourceTree = "<group>"; };
+		48F210CC1288B38C002745F2 /* scantree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scantree.cpp; sourceTree = "<group>"; };
+		48F210CD1288B38C002745F2 /* scantree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = scantree.hpp; sourceTree = "<group>"; };
+		48F210CE1288B38C002745F2 /* sha1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sha1.cpp; sourceTree = "<group>"; };
+		48F210CF1288B38C002745F2 /* sha1.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sha1.hpp; sourceTree = "<group>"; };
+		48F210D01288B38C002745F2 /* smallfn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = smallfn.cpp; sourceTree = "<group>"; };
+		48F210D11288B38C002745F2 /* smallfn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = smallfn.hpp; sourceTree = "<group>"; };
+		48F210D21288B38C002745F2 /* strfn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strfn.cpp; sourceTree = "<group>"; };
+		48F210D31288B38C002745F2 /* strfn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = strfn.hpp; sourceTree = "<group>"; };
+		48F210D41288B38C002745F2 /* strlist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strlist.cpp; sourceTree = "<group>"; };
+		48F210D51288B38C002745F2 /* strlist.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = strlist.hpp; sourceTree = "<group>"; };
+		48F210D81288B38C002745F2 /* system.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = system.cpp; sourceTree = "<group>"; };
+		48F210D91288B38C002745F2 /* system.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = system.hpp; sourceTree = "<group>"; };
+		48F210DA1288B38C002745F2 /* timefn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = timefn.cpp; sourceTree = "<group>"; };
+		48F210DB1288B38C002745F2 /* timefn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = timefn.hpp; sourceTree = "<group>"; };
+		48F210DC1288B38C002745F2 /* ulinks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ulinks.cpp; sourceTree = "<group>"; };
+		48F210DD1288B38C002745F2 /* ulinks.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ulinks.hpp; sourceTree = "<group>"; };
+		48F210DE1288B38C002745F2 /* unicode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unicode.cpp; sourceTree = "<group>"; };
+		48F210DF1288B38C002745F2 /* unicode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = unicode.hpp; sourceTree = "<group>"; };
+		48F210E11288B38C002745F2 /* unpack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unpack.cpp; sourceTree = "<group>"; };
+		48F210E21288B38C002745F2 /* unpack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = unpack.hpp; sourceTree = "<group>"; };
+		48F210E81288B38C002745F2 /* version.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = version.hpp; sourceTree = "<group>"; };
+		48F210E91288B38C002745F2 /* volume.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = volume.cpp; sourceTree = "<group>"; };
+		48F210EA1288B38C002745F2 /* volume.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = volume.hpp; sourceTree = "<group>"; };
+		65E185261A2250C500830805 /* UnrarFW4iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnrarFW4iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E185291A2250C500830805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65E1852A1A2250C500830805 /* UnrarFW4iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnrarFW4iOS.h; sourceTree = "<group>"; };
+		65E185441A2250DA00830805 /* UnrarFW4OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnrarFW4OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E185471A2250DA00830805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65E185481A2250DA00830805 /* UnrarFW4OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnrarFW4OSX.h; sourceTree = "<group>"; };
+		65E186601A2256FA00830805 /* Unrar4iOS.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = Unrar4iOS.podspec; path = /Users/lukasfoldyna/Documents/Projects/Frameworks/Unrar/Unrar4iOS/Unrar4iOS.podspec; sourceTree = "<absolute>"; };
+		65E186621A225F3000830805 /* coder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = coder.cpp; sourceTree = "<group>"; };
+		65E186631A225F3000830805 /* coder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = coder.hpp; sourceTree = "<group>"; };
+		65E186641A225F3000830805 /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = log.cpp; sourceTree = "<group>"; };
+		65E186651A225F3000830805 /* model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = model.cpp; sourceTree = "<group>"; };
+		65E186661A225F3000830805 /* model.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = model.hpp; sourceTree = "<group>"; };
+		65E186671A225F3000830805 /* rarvmtbl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rarvmtbl.cpp; sourceTree = "<group>"; };
+		65E186681A225F3000830805 /* resource.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = resource.hpp; sourceTree = "<group>"; };
+		65E186691A225F3000830805 /* suballoc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = suballoc.cpp; sourceTree = "<group>"; };
+		65E1866A1A225F3000830805 /* suballoc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = suballoc.hpp; sourceTree = "<group>"; };
+		65E1866B1A225F3000830805 /* unpack15.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unpack15.cpp; sourceTree = "<group>"; };
+		65E1866C1A225F3000830805 /* unpack20.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unpack20.cpp; sourceTree = "<group>"; };
+		65E1866D1A225F3000830805 /* uowners.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uowners.cpp; sourceTree = "<group>"; };
+		65E1869A1A233FE900830805 /* arccmt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arccmt.cpp; sourceTree = "<group>"; };
+		A6792C9716974622006F1B41 /* acknow.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = acknow.txt; sourceTree = "<group>"; };
+		A6792C9816974622006F1B41 /* secpassword.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = secpassword.cpp; sourceTree = "<group>"; };
+		A6792C9916974622006F1B41 /* secpassword.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = secpassword.hpp; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* Unrar4iOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unrar4iOS_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		D2AAC07E0554694100DB518D /* libUnrar4iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUnrar4iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65E185221A2250C500830805 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E185401A2250DA00830805 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libUnrar4iOS.a */,
+				65E185261A2250C500830805 /* UnrarFW4iOS.framework */,
+				65E185441A2250DA00830805 /* UnrarFW4OSX.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* Unrar4iOS */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				65E185271A2250C500830805 /* UnrarFW4iOS */,
+				65E185451A2250DA00830805 /* UnrarFW4OSX */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = Unrar4iOS;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				48F2106D1288B38C002745F2 /* unrar */,
+				489CFA0E128B5169005DCC2A /* Unrar4iOS.h */,
+				489CFA0F128B5169005DCC2A /* Unrar4iOS.mm */,
+				48BB62EC1621C83D00B424E2 /* RARExtractException.h */,
+				48BB62ED1621C83D00B424E2 /* RARExtractException.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				65E186601A2256FA00830805 /* Unrar4iOS.podspec */,
+				AA747D9E0F9514B9006C5449 /* Unrar4iOS_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		48F2106D1288B38C002745F2 /* unrar */ = {
+			isa = PBXGroup;
+			children = (
+				65E1869A1A233FE900830805 /* arccmt.cpp */,
+				65E186621A225F3000830805 /* coder.cpp */,
+				65E186631A225F3000830805 /* coder.hpp */,
+				65E186641A225F3000830805 /* log.cpp */,
+				65E186651A225F3000830805 /* model.cpp */,
+				65E186661A225F3000830805 /* model.hpp */,
+				65E186671A225F3000830805 /* rarvmtbl.cpp */,
+				65E186681A225F3000830805 /* resource.hpp */,
+				65E186691A225F3000830805 /* suballoc.cpp */,
+				65E1866A1A225F3000830805 /* suballoc.hpp */,
+				65E1866B1A225F3000830805 /* unpack15.cpp */,
+				65E1866C1A225F3000830805 /* unpack20.cpp */,
+				65E1866D1A225F3000830805 /* uowners.cpp */,
+				A6792C9716974622006F1B41 /* acknow.txt */,
+				48F2106F1288B38C002745F2 /* archive.cpp */,
+				48F210701288B38C002745F2 /* archive.hpp */,
+				48F210711288B38C002745F2 /* arcread.cpp */,
+				48F210721288B38C002745F2 /* array.hpp */,
+				48F210741288B38C002745F2 /* cmddata.cpp */,
+				48F210751288B38C002745F2 /* cmddata.hpp */,
+				48F210781288B38C002745F2 /* compress.hpp */,
+				48F210791288B38C002745F2 /* consio.cpp */,
+				48F2107A1288B38C002745F2 /* consio.hpp */,
+				48F2107B1288B38C002745F2 /* crc.cpp */,
+				48F2107C1288B38C002745F2 /* crc.hpp */,
+				48F2107D1288B38C002745F2 /* crypt.cpp */,
+				48F2107E1288B38C002745F2 /* crypt.hpp */,
+				48F2107F1288B38C002745F2 /* dll.cpp */,
+				48F210811288B38C002745F2 /* dll.hpp */,
+				48F210831288B38C002745F2 /* encname.cpp */,
+				48F210841288B38C002745F2 /* encname.hpp */,
+				48F210851288B38C002745F2 /* errhnd.cpp */,
+				48F210861288B38C002745F2 /* errhnd.hpp */,
+				48F210871288B38C002745F2 /* extinfo.cpp */,
+				48F210881288B38C002745F2 /* extinfo.hpp */,
+				48F210891288B38C002745F2 /* extract.cpp */,
+				48F2108A1288B38C002745F2 /* extract.hpp */,
+				48F2108B1288B38C002745F2 /* filcreat.cpp */,
+				48F2108C1288B38C002745F2 /* filcreat.hpp */,
+				48F2108D1288B38C002745F2 /* file.cpp */,
+				48F2108E1288B38C002745F2 /* file.hpp */,
+				48F2108F1288B38C002745F2 /* filefn.cpp */,
+				48F210901288B38C002745F2 /* filefn.hpp */,
+				48F210911288B38C002745F2 /* filestr.cpp */,
+				48F210921288B38C002745F2 /* filestr.hpp */,
+				48F210931288B38C002745F2 /* find.cpp */,
+				48F210941288B38C002745F2 /* find.hpp */,
+				48F210951288B38C002745F2 /* getbits.cpp */,
+				48F210961288B38C002745F2 /* getbits.hpp */,
+				48F210971288B38C002745F2 /* global.cpp */,
+				48F210981288B38C002745F2 /* global.hpp */,
+				48F210991288B38C002745F2 /* headers.hpp */,
+				48F2109A1288B38C002745F2 /* isnt.cpp */,
+				48F2109B1288B38C002745F2 /* isnt.hpp */,
+				48F2109C1288B38C002745F2 /* license.txt */,
+				48F2109D1288B38C002745F2 /* list.cpp */,
+				48F2109E1288B38C002745F2 /* list.hpp */,
+				48F2109F1288B38C002745F2 /* loclang.hpp */,
+				48F210A11288B38C002745F2 /* log.hpp */,
+				48F210A71288B38C002745F2 /* match.cpp */,
+				48F210A81288B38C002745F2 /* match.hpp */,
+				48F210AC1288B38C002745F2 /* options.cpp */,
+				48F210AD1288B38C002745F2 /* options.hpp */,
+				48F210AE1288B38C002745F2 /* os.hpp */,
+				48F210B01288B38C002745F2 /* pathfn.cpp */,
+				48F210B11288B38C002745F2 /* pathfn.hpp */,
+				48F210B21288B38C002745F2 /* rar.cpp */,
+				48F210B31288B38C002745F2 /* rar.hpp */,
+				48F210B41288B38C002745F2 /* rardefs.hpp */,
+				48F210B51288B38C002745F2 /* rarlang.hpp */,
+				48F210B61288B38C002745F2 /* raros.hpp */,
+				48F210B81288B38C002745F2 /* rartypes.hpp */,
+				48F210B91288B38C002745F2 /* rarvm.cpp */,
+				48F210BA1288B38C002745F2 /* rarvm.hpp */,
+				48F210BC1288B38C002745F2 /* rawread.cpp */,
+				48F210BD1288B38C002745F2 /* rawread.hpp */,
+				48F210BE1288B38C002745F2 /* rdwrfn.cpp */,
+				48F210BF1288B38C002745F2 /* rdwrfn.hpp */,
+				48F210C11288B38C002745F2 /* readme.txt */,
+				48F210C21288B38C002745F2 /* recvol.cpp */,
+				48F210C31288B38C002745F2 /* recvol.hpp */,
+				48F210C41288B38C002745F2 /* resource.cpp */,
+				48F210C61288B38C002745F2 /* rijndael.cpp */,
+				48F210C71288B38C002745F2 /* rijndael.hpp */,
+				48F210C81288B38C002745F2 /* rs.cpp */,
+				48F210C91288B38C002745F2 /* rs.hpp */,
+				48F210CA1288B38C002745F2 /* savepos.cpp */,
+				48F210CB1288B38C002745F2 /* savepos.hpp */,
+				48F210CC1288B38C002745F2 /* scantree.cpp */,
+				48F210CD1288B38C002745F2 /* scantree.hpp */,
+				A6792C9816974622006F1B41 /* secpassword.cpp */,
+				A6792C9916974622006F1B41 /* secpassword.hpp */,
+				48F210CE1288B38C002745F2 /* sha1.cpp */,
+				48F210CF1288B38C002745F2 /* sha1.hpp */,
+				48F210D01288B38C002745F2 /* smallfn.cpp */,
+				48F210D11288B38C002745F2 /* smallfn.hpp */,
+				48F210D21288B38C002745F2 /* strfn.cpp */,
+				48F210D31288B38C002745F2 /* strfn.hpp */,
+				48F210D41288B38C002745F2 /* strlist.cpp */,
+				48F210D51288B38C002745F2 /* strlist.hpp */,
+				48F210D81288B38C002745F2 /* system.cpp */,
+				48F210D91288B38C002745F2 /* system.hpp */,
+				48F210DA1288B38C002745F2 /* timefn.cpp */,
+				48F210DB1288B38C002745F2 /* timefn.hpp */,
+				48F210DC1288B38C002745F2 /* ulinks.cpp */,
+				48F210DD1288B38C002745F2 /* ulinks.hpp */,
+				48F210DE1288B38C002745F2 /* unicode.cpp */,
+				48F210DF1288B38C002745F2 /* unicode.hpp */,
+				48F210E11288B38C002745F2 /* unpack.cpp */,
+				48F210E21288B38C002745F2 /* unpack.hpp */,
+				48F210E81288B38C002745F2 /* version.hpp */,
+				48F210E91288B38C002745F2 /* volume.cpp */,
+				48F210EA1288B38C002745F2 /* volume.hpp */,
+			);
+			path = unrar;
+			sourceTree = "<group>";
+		};
+		65E185271A2250C500830805 /* UnrarFW4iOS */ = {
+			isa = PBXGroup;
+			children = (
+				65E1852A1A2250C500830805 /* UnrarFW4iOS.h */,
+				65E185281A2250C500830805 /* Supporting Files */,
+			);
+			path = UnrarFW4iOS;
+			sourceTree = "<group>";
+		};
+		65E185281A2250C500830805 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65E185291A2250C500830805 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65E185451A2250DA00830805 /* UnrarFW4OSX */ = {
+			isa = PBXGroup;
+			children = (
+				65E185481A2250DA00830805 /* UnrarFW4OSX.h */,
+				65E185461A2250DA00830805 /* Supporting Files */,
+			);
+			path = UnrarFW4OSX;
+			sourceTree = "<group>";
+		};
+		65E185461A2250DA00830805 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65E185471A2250DA00830805 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		65E185231A2250C500830805 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E1859E1A22513500830805 /* match.hpp in Headers */,
+				65E185871A22513500830805 /* filefn.hpp in Headers */,
+				65E1857B1A22513500830805 /* encname.hpp in Headers */,
+				65E185D21A22513500830805 /* timefn.hpp in Headers */,
+				65E1857D1A22513500830805 /* errhnd.hpp in Headers */,
+				65E185CA1A22513500830805 /* strfn.hpp in Headers */,
+				65E1855E1A22512000830805 /* RARExtractException.h in Headers */,
+				65E185901A22513500830805 /* headers.hpp in Headers */,
+				65E185B31A22513500830805 /* rawread.hpp in Headers */,
+				65E185DD1A22513500830805 /* version.hpp in Headers */,
+				65E185C21A22513500830805 /* scantree.hpp in Headers */,
+				65E185A71A22513500830805 /* pathfn.hpp in Headers */,
+				65E185D91A22513500830805 /* unpack.hpp in Headers */,
+				65E185AE1A22513500830805 /* rartypes.hpp in Headers */,
+				65E185D61A22513500830805 /* unicode.hpp in Headers */,
+				65E1855D1A22512000830805 /* Unrar4iOS.h in Headers */,
+				65E185D41A22513500830805 /* ulinks.hpp in Headers */,
+				65E185BC1A22513500830805 /* rijndael.hpp in Headers */,
+				65E185AC1A22513500830805 /* raros.hpp in Headers */,
+				65E185A31A22513500830805 /* options.hpp in Headers */,
+				65E185691A22513500830805 /* array.hpp in Headers */,
+				65E185851A22513500830805 /* file.hpp in Headers */,
+				65E185711A22513500830805 /* consio.hpp in Headers */,
+				65E1856C1A22513500830805 /* cmddata.hpp in Headers */,
+				65E1852B1A2250C500830805 /* UnrarFW4iOS.h in Headers */,
+				65E1858F1A22513500830805 /* global.hpp in Headers */,
+				65E185C01A22513500830805 /* savepos.hpp in Headers */,
+				65E185AB1A22513500830805 /* rarlang.hpp in Headers */,
+				65E1857F1A22513500830805 /* extinfo.hpp in Headers */,
+				65E1858B1A22513500830805 /* find.hpp in Headers */,
+				65E185AA1A22513500830805 /* rardefs.hpp in Headers */,
+				65E185C61A22513500830805 /* sha1.hpp in Headers */,
+				65E185B01A22513500830805 /* rarvm.hpp in Headers */,
+				65E185BE1A22513500830805 /* rs.hpp in Headers */,
+				65E185961A22513500830805 /* loclang.hpp in Headers */,
+				65E1868A1A225F3000830805 /* suballoc.hpp in Headers */,
+				65E185C81A22513500830805 /* smallfn.hpp in Headers */,
+				65E185D01A22513500830805 /* system.hpp in Headers */,
+				65E186841A225F3000830805 /* resource.hpp in Headers */,
+				65E1858D1A22513500830805 /* getbits.hpp in Headers */,
+				65E185B51A22513500830805 /* rdwrfn.hpp in Headers */,
+				65E185951A22513500830805 /* list.hpp in Headers */,
+				65E1867E1A225F3000830805 /* model.hpp in Headers */,
+				65E185731A22513500830805 /* crc.hpp in Headers */,
+				65E185DF1A22513500830805 /* volume.hpp in Headers */,
+				65E185831A22513500830805 /* filcreat.hpp in Headers */,
+				65E185C41A22513500830805 /* secpassword.hpp in Headers */,
+				65E185921A22513500830805 /* isnt.hpp in Headers */,
+				65E185891A22513500830805 /* filestr.hpp in Headers */,
+				65E185B81A22513500830805 /* recvol.hpp in Headers */,
+				65E185CC1A22513500830805 /* strlist.hpp in Headers */,
+				65E186751A225F3000830805 /* coder.hpp in Headers */,
+				65E185A91A22513500830805 /* rar.hpp in Headers */,
+				65E1856F1A22513500830805 /* compress.hpp in Headers */,
+				65E185811A22513500830805 /* extract.hpp in Headers */,
+				65E185781A22513500830805 /* dll.hpp in Headers */,
+				65E185671A22513500830805 /* archive.hpp in Headers */,
+				65E185751A22513500830805 /* crypt.hpp in Headers */,
+				65E185A41A22513500830805 /* os.hpp in Headers */,
+				65E185981A22513500830805 /* log.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E185411A2250DA00830805 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E1861B1A22513600830805 /* match.hpp in Headers */,
+				65E186041A22513600830805 /* filefn.hpp in Headers */,
+				65E185F81A22513600830805 /* encname.hpp in Headers */,
+				65E1864F1A22513600830805 /* timefn.hpp in Headers */,
+				65E185FA1A22513600830805 /* errhnd.hpp in Headers */,
+				65E186471A22513600830805 /* strfn.hpp in Headers */,
+				65E185601A22512000830805 /* RARExtractException.h in Headers */,
+				65E1860D1A22513600830805 /* headers.hpp in Headers */,
+				65E186301A22513600830805 /* rawread.hpp in Headers */,
+				65E1865A1A22513600830805 /* version.hpp in Headers */,
+				65E1863F1A22513600830805 /* scantree.hpp in Headers */,
+				65E186241A22513600830805 /* pathfn.hpp in Headers */,
+				65E186561A22513600830805 /* unpack.hpp in Headers */,
+				65E1862B1A22513600830805 /* rartypes.hpp in Headers */,
+				65E186531A22513600830805 /* unicode.hpp in Headers */,
+				65E1855F1A22512000830805 /* Unrar4iOS.h in Headers */,
+				65E186511A22513600830805 /* ulinks.hpp in Headers */,
+				65E186391A22513600830805 /* rijndael.hpp in Headers */,
+				65E186291A22513600830805 /* raros.hpp in Headers */,
+				65E186201A22513600830805 /* options.hpp in Headers */,
+				65E185E61A22513600830805 /* array.hpp in Headers */,
+				65E186021A22513600830805 /* file.hpp in Headers */,
+				65E185EE1A22513600830805 /* consio.hpp in Headers */,
+				65E185E91A22513600830805 /* cmddata.hpp in Headers */,
+				65E185491A2250DA00830805 /* UnrarFW4OSX.h in Headers */,
+				65E1860C1A22513600830805 /* global.hpp in Headers */,
+				65E1863D1A22513600830805 /* savepos.hpp in Headers */,
+				65E186281A22513600830805 /* rarlang.hpp in Headers */,
+				65E185FC1A22513600830805 /* extinfo.hpp in Headers */,
+				65E186081A22513600830805 /* find.hpp in Headers */,
+				65E186271A22513600830805 /* rardefs.hpp in Headers */,
+				65E186431A22513600830805 /* sha1.hpp in Headers */,
+				65E1862D1A22513600830805 /* rarvm.hpp in Headers */,
+				65E1863B1A22513600830805 /* rs.hpp in Headers */,
+				65E186131A22513600830805 /* loclang.hpp in Headers */,
+				65E1868B1A225F3000830805 /* suballoc.hpp in Headers */,
+				65E186451A22513600830805 /* smallfn.hpp in Headers */,
+				65E1864D1A22513600830805 /* system.hpp in Headers */,
+				65E186851A225F3000830805 /* resource.hpp in Headers */,
+				65E1860A1A22513600830805 /* getbits.hpp in Headers */,
+				65E186321A22513600830805 /* rdwrfn.hpp in Headers */,
+				65E186121A22513600830805 /* list.hpp in Headers */,
+				65E1867F1A225F3000830805 /* model.hpp in Headers */,
+				65E185F01A22513600830805 /* crc.hpp in Headers */,
+				65E1865C1A22513600830805 /* volume.hpp in Headers */,
+				65E186001A22513600830805 /* filcreat.hpp in Headers */,
+				65E186411A22513600830805 /* secpassword.hpp in Headers */,
+				65E1860F1A22513600830805 /* isnt.hpp in Headers */,
+				65E186061A22513600830805 /* filestr.hpp in Headers */,
+				65E186351A22513600830805 /* recvol.hpp in Headers */,
+				65E186491A22513600830805 /* strlist.hpp in Headers */,
+				65E186761A225F3000830805 /* coder.hpp in Headers */,
+				65E186261A22513600830805 /* rar.hpp in Headers */,
+				65E185EC1A22513600830805 /* compress.hpp in Headers */,
+				65E185FE1A22513600830805 /* extract.hpp in Headers */,
+				65E185F51A22513600830805 /* dll.hpp in Headers */,
+				65E185E41A22513600830805 /* archive.hpp in Headers */,
+				65E185F21A22513600830805 /* crypt.hpp in Headers */,
+				65E186211A22513600830805 /* os.hpp in Headers */,
+				65E186151A22513600830805 /* log.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48F210EF1288B38C002745F2 /* archive.hpp in Headers */,
+				48F210F11288B38C002745F2 /* array.hpp in Headers */,
+				48F210F41288B38C002745F2 /* cmddata.hpp in Headers */,
+				48F210F71288B38C002745F2 /* compress.hpp in Headers */,
+				48F210F91288B38C002745F2 /* consio.hpp in Headers */,
+				48F210FB1288B38C002745F2 /* crc.hpp in Headers */,
+				48F210FD1288B38C002745F2 /* crypt.hpp in Headers */,
+				48F210FF1288B38C002745F2 /* dll.hpp in Headers */,
+				65E186831A225F3000830805 /* resource.hpp in Headers */,
+				48F211011288B38C002745F2 /* encname.hpp in Headers */,
+				48F211031288B38C002745F2 /* errhnd.hpp in Headers */,
+				48F211051288B38C002745F2 /* extinfo.hpp in Headers */,
+				48F211071288B38C002745F2 /* extract.hpp in Headers */,
+				48F211091288B38C002745F2 /* filcreat.hpp in Headers */,
+				48F2110B1288B38C002745F2 /* file.hpp in Headers */,
+				48F2110D1288B38C002745F2 /* filefn.hpp in Headers */,
+				48F2110F1288B38C002745F2 /* filestr.hpp in Headers */,
+				48F211111288B38C002745F2 /* find.hpp in Headers */,
+				48F211131288B38C002745F2 /* getbits.hpp in Headers */,
+				48F211151288B38C002745F2 /* global.hpp in Headers */,
+				65E186891A225F3000830805 /* suballoc.hpp in Headers */,
+				48F211161288B38C002745F2 /* headers.hpp in Headers */,
+				48F211181288B38C002745F2 /* isnt.hpp in Headers */,
+				48F2111A1288B38C002745F2 /* list.hpp in Headers */,
+				48F2111B1288B38C002745F2 /* loclang.hpp in Headers */,
+				48F2111D1288B38C002745F2 /* log.hpp in Headers */,
+				48F2111F1288B38C002745F2 /* match.hpp in Headers */,
+				48F211231288B38C002745F2 /* options.hpp in Headers */,
+				48F211241288B38C002745F2 /* os.hpp in Headers */,
+				48F211271288B38C002745F2 /* pathfn.hpp in Headers */,
+				48F211291288B38C002745F2 /* rar.hpp in Headers */,
+				48F2112A1288B38C002745F2 /* rardefs.hpp in Headers */,
+				48F2112B1288B38C002745F2 /* rarlang.hpp in Headers */,
+				48F2112C1288B38C002745F2 /* raros.hpp in Headers */,
+				48F2112E1288B38C002745F2 /* rartypes.hpp in Headers */,
+				48F211301288B38C002745F2 /* rarvm.hpp in Headers */,
+				48F211331288B38C002745F2 /* rawread.hpp in Headers */,
+				48F211351288B38C002745F2 /* rdwrfn.hpp in Headers */,
+				65E186741A225F3000830805 /* coder.hpp in Headers */,
+				48F211371288B38C002745F2 /* recvol.hpp in Headers */,
+				48F2113B1288B38C002745F2 /* rijndael.hpp in Headers */,
+				48F2113D1288B38C002745F2 /* rs.hpp in Headers */,
+				48F2113F1288B38C002745F2 /* savepos.hpp in Headers */,
+				65E1867D1A225F3000830805 /* model.hpp in Headers */,
+				48F211411288B38C002745F2 /* scantree.hpp in Headers */,
+				48F211431288B38C002745F2 /* sha1.hpp in Headers */,
+				48F211451288B38C002745F2 /* smallfn.hpp in Headers */,
+				48F211471288B38C002745F2 /* strfn.hpp in Headers */,
+				48F211491288B38C002745F2 /* strlist.hpp in Headers */,
+				48F2114D1288B38C002745F2 /* system.hpp in Headers */,
+				48F2114F1288B38C002745F2 /* timefn.hpp in Headers */,
+				48F211511288B38C002745F2 /* ulinks.hpp in Headers */,
+				48F211531288B38C002745F2 /* unicode.hpp in Headers */,
+				48F211561288B38C002745F2 /* unpack.hpp in Headers */,
+				480F5FC6128A069300A9B478 /* volume.hpp in Headers */,
+				48F2115A1288B38C002745F2 /* version.hpp in Headers */,
+				489CFA10128B5169005DCC2A /* Unrar4iOS.h in Headers */,
+				48BB62EE1621C83D00B424E2 /* RARExtractException.h in Headers */,
+				A6792C9B16974622006F1B41 /* secpassword.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		65E185251A2250C500830805 /* UnrarFW4iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65E185391A2250C500830805 /* Build configuration list for PBXNativeTarget "UnrarFW4iOS" */;
+			buildPhases = (
+				65E185211A2250C500830805 /* Sources */,
+				65E185221A2250C500830805 /* Frameworks */,
+				65E185231A2250C500830805 /* Headers */,
+				65E185241A2250C500830805 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnrarFW4iOS;
+			productName = UnrarFW4iOS;
+			productReference = 65E185261A2250C500830805 /* UnrarFW4iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		65E185431A2250DA00830805 /* UnrarFW4OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65E185571A2250DA00830805 /* Build configuration list for PBXNativeTarget "UnrarFW4OSX" */;
+			buildPhases = (
+				65E1853F1A2250DA00830805 /* Sources */,
+				65E185401A2250DA00830805 /* Frameworks */,
+				65E185411A2250DA00830805 /* Headers */,
+				65E185421A2250DA00830805 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnrarFW4OSX;
+			productName = UnrarFW4OSX;
+			productReference = 65E185441A2250DA00830805 /* UnrarFW4OSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D2AAC07D0554694100DB518D /* Unrar4iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "Unrar4iOS" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Unrar4iOS;
+			productName = Unrar4iOS;
+			productReference = D2AAC07E0554694100DB518D /* libUnrar4iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					65E185251A2250C500830805 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					65E185431A2250DA00830805 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "Unrar4iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* Unrar4iOS */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* Unrar4iOS */,
+				65E185251A2250C500830805 /* UnrarFW4iOS */,
+				65E185431A2250DA00830805 /* UnrarFW4OSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65E185241A2250C500830805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E185421A2250DA00830805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65E185211A2250C500830805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E1859D1A22513500830805 /* match.cpp in Sources */,
+				65E185A61A22513500830805 /* pathfn.cpp in Sources */,
+				65E185A21A22513500830805 /* options.cpp in Sources */,
+				65E1869C1A233FE900830805 /* arccmt.cpp in Sources */,
+				65E185761A22513500830805 /* dll.cpp in Sources */,
+				65E185741A22513500830805 /* crypt.cpp in Sources */,
+				65E185681A22513500830805 /* arcread.cpp in Sources */,
+				65E185631A22512700830805 /* Unrar4iOS.mm in Sources */,
+				65E1858C1A22513500830805 /* getbits.cpp in Sources */,
+				65E1857C1A22513500830805 /* errhnd.cpp in Sources */,
+				65E185BF1A22513500830805 /* savepos.cpp in Sources */,
+				65E1858E1A22513500830805 /* global.cpp in Sources */,
+				65E1857A1A22513500830805 /* encname.cpp in Sources */,
+				65E185B91A22513500830805 /* resource.cpp in Sources */,
+				65E185861A22513500830805 /* filefn.cpp in Sources */,
+				65E185721A22513500830805 /* crc.cpp in Sources */,
+				65E185CF1A22513500830805 /* system.cpp in Sources */,
+				65E185DE1A22513500830805 /* volume.cpp in Sources */,
+				65E185CB1A22513500830805 /* strlist.cpp in Sources */,
+				65E185C71A22513500830805 /* smallfn.cpp in Sources */,
+				65E185801A22513500830805 /* extract.cpp in Sources */,
+				65E185C11A22513500830805 /* scantree.cpp in Sources */,
+				65E185B41A22513500830805 /* rdwrfn.cpp in Sources */,
+				65E185881A22513500830805 /* filestr.cpp in Sources */,
+				65E185C91A22513500830805 /* strfn.cpp in Sources */,
+				65E185701A22513500830805 /* consio.cpp in Sources */,
+				65E185B21A22513500830805 /* rawread.cpp in Sources */,
+				65E1857E1A22513500830805 /* extinfo.cpp in Sources */,
+				65E185841A22513500830805 /* file.cpp in Sources */,
+				65E185821A22513500830805 /* filcreat.cpp in Sources */,
+				65E185AF1A22513500830805 /* rarvm.cpp in Sources */,
+				65E185BD1A22513500830805 /* rs.cpp in Sources */,
+				65E185B71A22513500830805 /* recvol.cpp in Sources */,
+				65E185C31A22513500830805 /* secpassword.cpp in Sources */,
+				65E185941A22513500830805 /* list.cpp in Sources */,
+				65E1856B1A22513500830805 /* cmddata.cpp in Sources */,
+				65E185D81A22513500830805 /* unpack.cpp in Sources */,
+				65E1858A1A22513500830805 /* find.cpp in Sources */,
+				65E185D51A22513500830805 /* unicode.cpp in Sources */,
+				65E185D11A22513500830805 /* timefn.cpp in Sources */,
+				65E185C51A22513500830805 /* sha1.cpp in Sources */,
+				65E185661A22513500830805 /* archive.cpp in Sources */,
+				65E185641A22512700830805 /* RARExtractException.m in Sources */,
+				65E185A81A22513500830805 /* rar.cpp in Sources */,
+				65E185D31A22513500830805 /* ulinks.cpp in Sources */,
+				65E185BB1A22513500830805 /* rijndael.cpp in Sources */,
+				65E185911A22513500830805 /* isnt.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E1853F1A2250DA00830805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E1861A1A22513600830805 /* match.cpp in Sources */,
+				65E186231A22513600830805 /* pathfn.cpp in Sources */,
+				65E1861F1A22513600830805 /* options.cpp in Sources */,
+				65E1869D1A233FE900830805 /* arccmt.cpp in Sources */,
+				65E185F31A22513600830805 /* dll.cpp in Sources */,
+				65E185F11A22513600830805 /* crypt.cpp in Sources */,
+				65E185E51A22513600830805 /* arcread.cpp in Sources */,
+				65E185611A22512600830805 /* Unrar4iOS.mm in Sources */,
+				65E186091A22513600830805 /* getbits.cpp in Sources */,
+				65E185F91A22513600830805 /* errhnd.cpp in Sources */,
+				65E1863C1A22513600830805 /* savepos.cpp in Sources */,
+				65E1860B1A22513600830805 /* global.cpp in Sources */,
+				65E185F71A22513600830805 /* encname.cpp in Sources */,
+				65E186361A22513600830805 /* resource.cpp in Sources */,
+				65E186031A22513600830805 /* filefn.cpp in Sources */,
+				65E185EF1A22513600830805 /* crc.cpp in Sources */,
+				65E1864C1A22513600830805 /* system.cpp in Sources */,
+				65E1865B1A22513600830805 /* volume.cpp in Sources */,
+				65E186481A22513600830805 /* strlist.cpp in Sources */,
+				65E186441A22513600830805 /* smallfn.cpp in Sources */,
+				65E185FD1A22513600830805 /* extract.cpp in Sources */,
+				65E1863E1A22513600830805 /* scantree.cpp in Sources */,
+				65E186311A22513600830805 /* rdwrfn.cpp in Sources */,
+				65E186051A22513600830805 /* filestr.cpp in Sources */,
+				65E186461A22513600830805 /* strfn.cpp in Sources */,
+				65E185ED1A22513600830805 /* consio.cpp in Sources */,
+				65E1862F1A22513600830805 /* rawread.cpp in Sources */,
+				65E185FB1A22513600830805 /* extinfo.cpp in Sources */,
+				65E186011A22513600830805 /* file.cpp in Sources */,
+				65E185FF1A22513600830805 /* filcreat.cpp in Sources */,
+				65E1862C1A22513600830805 /* rarvm.cpp in Sources */,
+				65E1863A1A22513600830805 /* rs.cpp in Sources */,
+				65E186341A22513600830805 /* recvol.cpp in Sources */,
+				65E186401A22513600830805 /* secpassword.cpp in Sources */,
+				65E186111A22513600830805 /* list.cpp in Sources */,
+				65E185E81A22513600830805 /* cmddata.cpp in Sources */,
+				65E186551A22513600830805 /* unpack.cpp in Sources */,
+				65E186071A22513600830805 /* find.cpp in Sources */,
+				65E186521A22513600830805 /* unicode.cpp in Sources */,
+				65E1864E1A22513600830805 /* timefn.cpp in Sources */,
+				65E186421A22513600830805 /* sha1.cpp in Sources */,
+				65E185E31A22513600830805 /* archive.cpp in Sources */,
+				65E185621A22512600830805 /* RARExtractException.m in Sources */,
+				65E186251A22513600830805 /* rar.cpp in Sources */,
+				65E186501A22513600830805 /* ulinks.cpp in Sources */,
+				65E186381A22513600830805 /* rijndael.cpp in Sources */,
+				65E1860E1A22513600830805 /* isnt.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				480F5FC7128A06A600A9B478 /* volume.cpp in Sources */,
+				48F210EE1288B38C002745F2 /* archive.cpp in Sources */,
+				48F210F01288B38C002745F2 /* arcread.cpp in Sources */,
+				65E1869B1A233FE900830805 /* arccmt.cpp in Sources */,
+				48F210F31288B38C002745F2 /* cmddata.cpp in Sources */,
+				48F210F81288B38C002745F2 /* consio.cpp in Sources */,
+				48F210FA1288B38C002745F2 /* crc.cpp in Sources */,
+				48F210FC1288B38C002745F2 /* crypt.cpp in Sources */,
+				48F210FE1288B38C002745F2 /* dll.cpp in Sources */,
+				48F211001288B38C002745F2 /* encname.cpp in Sources */,
+				48F211021288B38C002745F2 /* errhnd.cpp in Sources */,
+				48F211041288B38C002745F2 /* extinfo.cpp in Sources */,
+				48F211061288B38C002745F2 /* extract.cpp in Sources */,
+				48F211081288B38C002745F2 /* filcreat.cpp in Sources */,
+				48F2110A1288B38C002745F2 /* file.cpp in Sources */,
+				48F2110C1288B38C002745F2 /* filefn.cpp in Sources */,
+				48F2110E1288B38C002745F2 /* filestr.cpp in Sources */,
+				48F211101288B38C002745F2 /* find.cpp in Sources */,
+				48F211121288B38C002745F2 /* getbits.cpp in Sources */,
+				48F211141288B38C002745F2 /* global.cpp in Sources */,
+				48F211171288B38C002745F2 /* isnt.cpp in Sources */,
+				48F211191288B38C002745F2 /* list.cpp in Sources */,
+				48F2111E1288B38C002745F2 /* match.cpp in Sources */,
+				48F211221288B38C002745F2 /* options.cpp in Sources */,
+				48F211261288B38C002745F2 /* pathfn.cpp in Sources */,
+				48F211281288B38C002745F2 /* rar.cpp in Sources */,
+				48F2112F1288B38C002745F2 /* rarvm.cpp in Sources */,
+				48F211321288B38C002745F2 /* rawread.cpp in Sources */,
+				48F211341288B38C002745F2 /* rdwrfn.cpp in Sources */,
+				48F211361288B38C002745F2 /* recvol.cpp in Sources */,
+				48F211381288B38C002745F2 /* resource.cpp in Sources */,
+				48F2113A1288B38C002745F2 /* rijndael.cpp in Sources */,
+				48F2113C1288B38C002745F2 /* rs.cpp in Sources */,
+				48F2113E1288B38C002745F2 /* savepos.cpp in Sources */,
+				48F211401288B38C002745F2 /* scantree.cpp in Sources */,
+				48F211421288B38C002745F2 /* sha1.cpp in Sources */,
+				48F211441288B38C002745F2 /* smallfn.cpp in Sources */,
+				48F211461288B38C002745F2 /* strfn.cpp in Sources */,
+				48F211481288B38C002745F2 /* strlist.cpp in Sources */,
+				48F2114C1288B38C002745F2 /* system.cpp in Sources */,
+				48F2114E1288B38C002745F2 /* timefn.cpp in Sources */,
+				48F211501288B38C002745F2 /* ulinks.cpp in Sources */,
+				48F211521288B38C002745F2 /* unicode.cpp in Sources */,
+				48F211551288B38C002745F2 /* unpack.cpp in Sources */,
+				489CFA11128B5169005DCC2A /* Unrar4iOS.mm in Sources */,
+				48BB62EF1621C83D00B424E2 /* RARExtractException.m in Sources */,
+				A6792C9A16974622006F1B41 /* secpassword.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/Unrar4iOS.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Unrar4iOS_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = Unrar4iOS;
+				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = (
+					"-Wno-dangling-else",
+					"-Wno-parentheses",
+					"-Wno-return-type",
+					"-Wno-unused-variable",
+					"-Wno-switch",
+				);
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/Unrar4iOS.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Unrar4iOS_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = Unrar4iOS;
+				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = (
+					"-Wno-dangling-else",
+					"-Wno-parentheses",
+					"-Wno-return-type",
+					"-Wno-unused-variable",
+					"-Wno-switch",
+				);
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DSILENT",
+					"-DRARDLL",
+					"$(OTHER_CFLAGS)",
+				);
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DSILENT",
+					"-DRARDLL",
+					"$(OTHER_CFLAGS)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		65E1853A1A2250C500830805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = UnrarFW4iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WARNING_CFLAGS = (
+					"-Wno-dangling-else",
+					"-Wno-parentheses",
+					"-Wno-return-type",
+					"-Wno-unused-variable",
+					"-Wno-switch",
+				);
+			};
+			name = Debug;
+		};
+		65E1853B1A2250C500830805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = UnrarFW4iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WARNING_CFLAGS = (
+					"-Wno-dangling-else",
+					"-Wno-parentheses",
+					"-Wno-return-type",
+					"-Wno-unused-variable",
+					"-Wno-switch",
+				);
+			};
+			name = Release;
+		};
+		65E185581A2250DA00830805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = UnrarFW4OSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WARNING_CFLAGS = (
+					"-Wno-dangling-else",
+					"-Wno-parentheses",
+					"-Wno-return-type",
+					"-Wno-unused-variable",
+					"-Wno-switch",
+				);
+			};
+			name = Debug;
+		};
+		65E185591A2250DA00830805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = UnrarFW4OSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WARNING_CFLAGS = (
+					"-Wno-dangling-else",
+					"-Wno-parentheses",
+					"-Wno-return-type",
+					"-Wno-unused-variable",
+					"-Wno-switch",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "Unrar4iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "Unrar4iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65E185391A2250C500830805 /* Build configuration list for PBXNativeTarget "UnrarFW4iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E1853A1A2250C500830805 /* Debug */,
+				65E1853B1A2250C500830805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65E185571A2250DA00830805 /* Build configuration list for PBXNativeTarget "UnrarFW4OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E185581A2250DA00830805 /* Debug */,
+				65E185591A2250DA00830805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

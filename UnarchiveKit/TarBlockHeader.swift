@@ -47,6 +47,10 @@ struct TarBlockHeader {
             // Name
             var nameBytes = [Int8](repeating: 0, count: 256)
             strncpy(&nameBytes, bytes + 345, 155)
+            if nameBytes[0] != 0 {
+                // Add a slash after the name prefix
+                strncat(&nameBytes, [0x2F], 1)
+            }
             strncat(&nameBytes, bytes + 0, 100)
 
             if let nameString = String(validatingUTF8: nameBytes) {

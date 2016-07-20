@@ -15,14 +15,20 @@ public protocol FileArchive {
 
     func extractDataStream(fileInfo: ArchivedFileInfo) throws -> InputStream
 
+    // This has a default implementation based on `allFiles()`
+    func filesMatching(_ predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws -> [ArchivedFileInfo]
+
     // This has a default implementation based on `extractDataStream(fileInfo:)`
     func extractData(fileInfo: ArchivedFileInfo) throws -> Data
 
     // This has a default implementation based on `extractDataStream(fileInfo:)`
     func extractFile(fileInfo: ArchivedFileInfo, to url: URL) throws
 
-    // This has a default implementation based on `allFiles()` and `extractFile(fileInfo:url:)`
+    // This has a default implementation based on `extractFiles(toDirectory:matching:)`
     func extractAllFiles(toDirectory directory: URL) throws
+
+    // This has a default implementation based on `filesMatching(_:)` and `extractFile(fileInfo:url:)`
+    func extractFiles(toDirectory directory: URL, matching predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws
 
 }
 

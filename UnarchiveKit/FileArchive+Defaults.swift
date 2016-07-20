@@ -10,6 +10,10 @@ import Foundation
 
 public extension FileArchive {
 
+    func filesMatching(_ predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws -> [ArchivedFileInfo] {
+        return try allFiles().filter(predicate)
+    }
+
     func extractData(fileInfo: ArchivedFileInfo) throws -> Data {
         let stream = try extractDataStream(fileInfo: fileInfo)
         let data = try stream.synchronouslyGetData()
@@ -22,9 +26,13 @@ public extension FileArchive {
     }
 
     func extractAllFiles(toDirectory directory: URL) throws {
+        return try extractFiles(toDirectory: directory) { _ in return true }
+    }
+
+    func extractFiles(toDirectory directory: URL, matching predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws {
         try FileManager.default().createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
 
-        for file in try allFiles() {
+        for file in try filesMatching(predicate) {
             if let relativePath = file.path.safeRelativePath {
                 let outputPath = try directory.appendingPathComponent(relativePath)
 

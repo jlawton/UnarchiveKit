@@ -11,7 +11,7 @@ import Foundation
 /// A protocol describing multi-file archives
 public protocol FileArchive {
 
-    func allFiles() -> [ArchivedFileInfo]
+    func allFiles() throws -> [ArchivedFileInfo]
 
     func extractDataStream(fileInfo: ArchivedFileInfo) throws -> InputStream
 

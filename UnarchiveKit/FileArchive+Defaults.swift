@@ -24,7 +24,7 @@ public extension FileArchive {
     func extractAllFiles(toDirectory directory: URL) throws {
         try FileManager.default().createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
 
-        for file in allFiles() {
+        for file in try allFiles() {
             if let relativePath = file.path.safeRelativePath {
                 let outputPath = try directory.appendingPathComponent(relativePath)
 

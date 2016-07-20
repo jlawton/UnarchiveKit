@@ -14,6 +14,22 @@ public extension FileArchive {
         return try allFiles().filter(predicate)
     }
 
+    func locateFile(_ predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws -> ArchivedFileInfo? {
+        return try filesMatching(predicate).first
+    }
+
+    func locateFile(path: String) throws -> ArchivedFileInfo? {
+        return try locateFile { fileInfo in
+            fileInfo.path.path == path
+        }
+    }
+
+    func locateFile(named name: String) throws -> ArchivedFileInfo? {
+        return try locateFile { fileInfo in
+            fileInfo.path.fileName == name
+        }
+    }
+
     func extractData(fileInfo: ArchivedFileInfo) throws -> Data {
         let stream = try extractDataStream(fileInfo: fileInfo)
         let data = try stream.synchronouslyGetData()

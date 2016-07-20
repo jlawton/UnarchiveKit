@@ -18,6 +18,15 @@ public protocol FileArchive {
     // This has a default implementation based on `allFiles()`
     func filesMatching(_ predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws -> [ArchivedFileInfo]
 
+    // This has a default implementation based on `filesMatching(_:)`
+    func locateFile(_ predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws -> ArchivedFileInfo?
+
+    // This has a default implementation based on `locateFile(_:)`
+    func locateFile(path: String) throws -> ArchivedFileInfo?
+
+    // This has a default implementation based on `locateFile(_:)`
+    func locateFile(named name: String) throws -> ArchivedFileInfo?
+
     // This has a default implementation based on `extractDataStream(fileInfo:)`
     func extractData(fileInfo: ArchivedFileInfo) throws -> Data
 

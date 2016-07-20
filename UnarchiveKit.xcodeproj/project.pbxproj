@@ -46,6 +46,7 @@
 		1A90C62E1D3F250B0081C7FE /* TarSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C62D1D3F250B0081C7FE /* TarSource.swift */; };
 		1A90C6311D3F293A0081C7FE /* TarBlockHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C6301D3F293A0081C7FE /* TarBlockHeader.swift */; };
 		1A90C6361D3F36030081C7FE /* FileArchive+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C6351D3F36030081C7FE /* FileArchive+Defaults.swift */; };
+		1ABF2A701D3FE0DF00E2E7F5 /* ArchivedFilePath+Patterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF2A6F1D3FE0DF00E2E7F5 /* ArchivedFilePath+Patterns.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		1A90C62D1D3F250B0081C7FE /* TarSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarSource.swift; sourceTree = "<group>"; };
 		1A90C6301D3F293A0081C7FE /* TarBlockHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarBlockHeader.swift; sourceTree = "<group>"; };
 		1A90C6351D3F36030081C7FE /* FileArchive+Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileArchive+Defaults.swift"; sourceTree = "<group>"; };
+		1ABF2A6F1D3FE0DF00E2E7F5 /* ArchivedFilePath+Patterns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ArchivedFilePath+Patterns.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				1A4FEE001D3EFA0C000ADF27 /* ArchivedFilePath.swift */,
+				1ABF2A6F1D3FE0DF00E2E7F5 /* ArchivedFilePath+Patterns.swift */,
 				1A4FEDFA1D3EA9B2000ADF27 /* ArchiveFormats.swift */,
 				1A4FEDFE1D3EDE14000ADF27 /* InputStream+Data.swift */,
 			);
@@ -320,6 +323,7 @@
 				1A8D60211D3F577E00D48A7C /* aestab.c in Sources */,
 				1A8D602F1D3F577E00D48A7C /* sha1.c in Sources */,
 				1A4FEDF91D3EA5FE000ADF27 /* FileArchive.swift in Sources */,
+				1ABF2A701D3FE0DF00E2E7F5 /* ArchivedFilePath+Patterns.swift in Sources */,
 				1A90C6311D3F293A0081C7FE /* TarBlockHeader.swift in Sources */,
 				1A8D60321D3F577E00D48A7C /* ioapi.c in Sources */,
 				1A90C6361D3F36030081C7FE /* FileArchive+Defaults.swift in Sources */,

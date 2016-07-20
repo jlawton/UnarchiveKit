@@ -15,5 +15,5 @@ FOUNDATION_EXPORT double UnrarFW4iOSVersionNumber;
 FOUNDATION_EXPORT const unsigned char UnrarFW4iOSVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <UnrarFW4iOS/PublicHeader.h>
-
-
+#import <UnrarFW4iOS/Unrar4iOS.h>
+#import <UnrarFW4iOS/RARExtractException.h>

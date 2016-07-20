@@ -22,9 +22,16 @@ public extension FileArchive {
     }
 
     func extractAllFiles(toDirectory directory: URL) throws {
+        try FileManager.default().createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
+
         for file in allFiles() {
             if let relativePath = file.path.safeRelativePath {
                 let outputPath = try directory.appendingPathComponent(relativePath)
+
+                if let outputDirectory = try? outputPath.deletingLastPathComponent() {
+                    try FileManager.default().createDirectory(at: outputDirectory, withIntermediateDirectories: true, attributes: nil)
+                }
+
                 try extractFile(fileInfo: file, to: outputPath)
             }
         }

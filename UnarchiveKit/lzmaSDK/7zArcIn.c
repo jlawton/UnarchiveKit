@@ -17,7 +17,7 @@
   { MY_ALLOC(Byte, to, size, alloc); memcpy(to, from, size); }
 
 #define MY_ALLOC_ZE_AND_CPY(to, size, from, alloc) \
-  { if ((size) == 0) p = NULL; else { MY_ALLOC_AND_CPY(to, size, from, alloc) } }
+  { if ((size) == 0) to = NULL; else { MY_ALLOC_AND_CPY(to, size, from, alloc) } }
 
 #define k7zMajorVersion 0
 
@@ -646,6 +646,10 @@ static SRes ReadUnpackInfo(CSzAr *p,
   RINOK(SzReadNumber32(sd2, &numFolders));
   if (numFolders > numFoldersMax)
     return SZ_ERROR_UNSUPPORTED;
+
+  if (p == NULL)
+    return SZ_ERROR_PARAM;
+
   p->NumFolders = numFolders;
 
   SZ_READ_BYTE_SD(sd2, external);

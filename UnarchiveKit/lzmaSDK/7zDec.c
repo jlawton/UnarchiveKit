@@ -327,12 +327,14 @@ static SRes CheckSupportedFolder(const CSzFolder *f)
     switch ((UInt32)c->MethodID)
     {
       case k_Delta:
+      #ifndef _JAL_NO_EXECUTABLE_FILTERS
       case k_BCJ:
       case k_PPC:
       case k_IA64:
       case k_SPARC:
       case k_ARM:
       case k_ARMT:
+      #endif
         break;
       default:
         return SZ_ERROR_UNSUPPORTED;
@@ -345,6 +347,7 @@ static SRes CheckSupportedFolder(const CSzFolder *f)
 
   if (f->NumCoders == 4)
   {
+  #ifndef _JAL_NO_EXECUTABLE_FILTERS
     if (!IS_SUPPORTED_CODER(&f->Coders[1])
         || !IS_SUPPORTED_CODER(&f->Coders[2])
         || !IS_BCJ2(&f->Coders[3]))
@@ -360,6 +363,9 @@ static SRes CheckSupportedFolder(const CSzFolder *f)
         || f->Bonds[2].InIndex != 3 || f->Bonds[2].OutIndex != 2)
       return SZ_ERROR_UNSUPPORTED;
     return SZ_OK;
+  #else
+    return SZ_ERROR_UNSUPPORTED;
+  #endif
   }
 
   return SZ_ERROR_UNSUPPORTED;
@@ -377,8 +383,10 @@ static SRes SzFolder_Decode2(const CSzFolder *folder,
 {
   UInt32 ci;
   SizeT tempSizes[3] = { 0, 0, 0};
+  #ifndef _JAL_NO_EXECUTABLE_FILTERS
   SizeT tempSize3 = 0;
   Byte *tempBuf3 = 0;
+  #endif
 
   RINOK(CheckSupportedFolder(folder));
 
@@ -414,8 +422,10 @@ static SRes SzFolder_Decode2(const CSzFolder *folder,
         {
           if (unpackSize > outSize) /* check it */
             return SZ_ERROR_PARAM;
+          #ifndef _JAL_NO_EXECUTABLE_FILTERS
           tempBuf3 = outBufCur = outBuffer + (outSize - (size_t)unpackSize);
           tempSize3 = outSizeCur = (SizeT)unpackSize;
+          #endif
         }
         else
           return SZ_ERROR_UNSUPPORTED;

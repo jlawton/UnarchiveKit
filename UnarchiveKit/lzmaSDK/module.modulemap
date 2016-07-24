@@ -1,0 +1,10 @@
+module SevenZip [system][extern_c] {
+    header "7z.h"
+    header "7zAlloc.h"
+    header "7zBuf.h"
+    header "7zCrc.h"
+    header "7zFile.h"
+    header "7zTypes.h"
+    header "7zVersion.h"
+    export *
+}

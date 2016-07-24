@@ -106,7 +106,7 @@ typedef struct
 
   UInt64 startPosAfterHeader;
   UInt64 dataPos;
-  
+
   UInt32 NumFiles;
 
   UInt64 *UnpackPositions;  // NumFiles + 1
@@ -132,8 +132,6 @@ typedef struct
 
 void SzArEx_Init(CSzArEx *p);
 void SzArEx_Free(CSzArEx *p, ISzAlloc *alloc);
-UInt64 SzArEx_GetFolderStreamPos(const CSzArEx *p, UInt32 folderIndex, UInt32 indexInFolder);
-int SzArEx_GetFolderFullPackSize(const CSzArEx *p, UInt32 folderIndex, UInt64 *resSize);
 
 /*
 if dest == NULL, the return value specifies the required size of the buffer,
@@ -163,10 +161,10 @@ UInt16 *SzArEx_GetFullNameUtf16_Back(const CSzArEx *p, size_t fileIndex, UInt16 
       *outBufferSize
     You can consider "*outBuffer" as cache of solid block. If your archive is solid,
     it will increase decompression speed.
-  
+
     If you use external function, you can declare these 3 cache variables
     (blockIndex, outBuffer, outBufferSize) as static in that external function.
-    
+
     Free *outBuffer and set *outBuffer to 0, if you want to flush cache.
 */
 

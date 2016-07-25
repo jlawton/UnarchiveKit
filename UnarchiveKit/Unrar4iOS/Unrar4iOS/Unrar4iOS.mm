@@ -108,7 +108,7 @@ int CALLBACK CallbackProc(UINT msg, long UserData, long P1, long P2) {
         BOOL isDirectory = (header->Flags & 0xe0) == 0xe0;
         if (includeDirectories || !isDirectory) {
             wchar_t *fileNameW = header->FileNameW;
-            NSString *_filename = [[NSString alloc] initWithBytes:fileNameW length:wcslen(fileNameW) * sizeof(*fileNameW) encoding:NSUTF32LittleEndianStringEncoding];
+            NSString *_filename = [[[NSString alloc] initWithBytes:fileNameW length:wcslen(fileNameW) * sizeof(*fileNameW) encoding:NSUTF32LittleEndianStringEncoding] autorelease];
             [files addObject:_filename];
         }
 
@@ -156,7 +156,7 @@ int CALLBACK CallbackProc(UINT msg, long UserData, long P1, long P2) {
 	size_t length = 0;
 	while ((RHCode = RARReadHeaderEx(_rarFile, header)) == 0) {
     wchar_t *fileNameW = header->FileNameW;
-    NSString *_filename = [[NSString alloc] initWithBytes:fileNameW length:wcslen(fileNameW) * sizeof(*fileNameW) encoding:NSUTF32LittleEndianStringEncoding];
+    NSString *_filename = [[[NSString alloc] initWithBytes:fileNameW length:wcslen(fileNameW) * sizeof(*fileNameW) encoding:NSUTF32LittleEndianStringEncoding] autorelease];
 				
 		if ([_filename isEqualToString:aFile]) {
 			length = header->UnpSize;

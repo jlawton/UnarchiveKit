@@ -49,6 +49,38 @@
 		1A90C62E1D3F250B0081C7FE /* TarSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C62D1D3F250B0081C7FE /* TarSource.swift */; };
 		1A90C6311D3F293A0081C7FE /* TarBlockHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C6301D3F293A0081C7FE /* TarBlockHeader.swift */; };
 		1A90C6361D3F36030081C7FE /* FileArchive+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A90C6351D3F36030081C7FE /* FileArchive+Defaults.swift */; };
+		1A9B0A701D453264007091AA /* 7z.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0A481D453264007091AA /* 7z.h */; };
+		1A9B0A711D453265007091AA /* 7zAlloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A491D453264007091AA /* 7zAlloc.c */; };
+		1A9B0A721D453265007091AA /* 7zAlloc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0A4A1D453264007091AA /* 7zAlloc.h */; };
+		1A9B0A731D453265007091AA /* 7zArcIn.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A4B1D453264007091AA /* 7zArcIn.c */; };
+		1A9B0A741D453265007091AA /* 7zBuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A4C1D453264007091AA /* 7zBuf.c */; };
+		1A9B0A751D453265007091AA /* 7zBuf.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0A4D1D453264007091AA /* 7zBuf.h */; };
+		1A9B0A761D453265007091AA /* 7zBuf2.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A4E1D453264007091AA /* 7zBuf2.c */; };
+		1A9B0A771D453265007091AA /* 7zCrc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A4F1D453264007091AA /* 7zCrc.c */; };
+		1A9B0A781D453265007091AA /* 7zCrc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0A501D453264007091AA /* 7zCrc.h */; };
+		1A9B0A791D453265007091AA /* 7zCrcOpt.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A511D453264007091AA /* 7zCrcOpt.c */; };
+		1A9B0A7A1D453265007091AA /* 7zDec.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A521D453264007091AA /* 7zDec.c */; };
+		1A9B0A7B1D453265007091AA /* 7zFile.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A531D453264007091AA /* 7zFile.c */; };
+		1A9B0A7C1D453265007091AA /* 7zFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0A541D453264007091AA /* 7zFile.h */; };
+		1A9B0A7D1D453265007091AA /* 7zStream.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A551D453264007091AA /* 7zStream.c */; };
+		1A9B0A7E1D453265007091AA /* 7zTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0A561D453264007091AA /* 7zTypes.h */; };
+		1A9B0A7F1D453265007091AA /* 7zVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0A571D453264007091AA /* 7zVersion.h */; };
+		1A9B0A821D453265007091AA /* CpuArch.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A5A1D453264007091AA /* CpuArch.c */; };
+		1A9B0A831D453265007091AA /* CpuArch.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0A5B1D453264007091AA /* CpuArch.h */; };
+		1A9B0A841D453265007091AA /* Delta.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A5C1D453264007091AA /* Delta.c */; };
+		1A9B0A851D453265007091AA /* Delta.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0A5D1D453264007091AA /* Delta.h */; };
+		1A9B0A861D453265007091AA /* Lzma2Dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A5E1D453264007091AA /* Lzma2Dec.c */; };
+		1A9B0A871D453265007091AA /* Lzma2Dec.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0A5F1D453264007091AA /* Lzma2Dec.h */; };
+		1A9B0A881D453265007091AA /* LzmaDec.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A601D453264007091AA /* LzmaDec.c */; };
+		1A9B0A891D453265007091AA /* LzmaDec.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0A611D453264007091AA /* LzmaDec.h */; };
+		1A9B0A8E1D453265007091AA /* Ppmd.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0A661D453264007091AA /* Ppmd.h */; };
+		1A9B0A8F1D453265007091AA /* Ppmd7.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A671D453264007091AA /* Ppmd7.c */; };
+		1A9B0A901D453265007091AA /* Ppmd7.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0A681D453264007091AA /* Ppmd7.h */; };
+		1A9B0A911D453265007091AA /* Ppmd7Dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0A691D453264007091AA /* Ppmd7Dec.c */; };
+		1A9B0A921D453265007091AA /* RotateDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0A6A1D453264007091AA /* RotateDefs.h */; };
+		1A9B0AA81D45642D007091AA /* SevenZipArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0AA71D45642D007091AA /* SevenZipArchive.swift */; };
+		1A9B0AAC1D456A9E007091AA /* 7zInterface.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B0AAA1D456A9E007091AA /* 7zInterface.c */; };
+		1A9B0AAD1D456A9E007091AA /* 7zInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B0AAB1D456A9E007091AA /* 7zInterface.h */; };
 		1AA8FC0C1D401B4D00F535F2 /* RarArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8FC0B1D401B4D00F535F2 /* RarArchive.swift */; };
 		1ABF2A701D3FE0DF00E2E7F5 /* ArchivedFilePath+Patterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF2A6F1D3FE0DF00E2E7F5 /* ArchivedFilePath+Patterns.swift */; };
 /* End PBXBuildFile section */
@@ -123,6 +155,39 @@
 		1A90C62D1D3F250B0081C7FE /* TarSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarSource.swift; sourceTree = "<group>"; };
 		1A90C6301D3F293A0081C7FE /* TarBlockHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarBlockHeader.swift; sourceTree = "<group>"; };
 		1A90C6351D3F36030081C7FE /* FileArchive+Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileArchive+Defaults.swift"; sourceTree = "<group>"; };
+		1A9B0A481D453264007091AA /* 7z.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 7z.h; sourceTree = "<group>"; };
+		1A9B0A491D453264007091AA /* 7zAlloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 7zAlloc.c; sourceTree = "<group>"; };
+		1A9B0A4A1D453264007091AA /* 7zAlloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 7zAlloc.h; sourceTree = "<group>"; };
+		1A9B0A4B1D453264007091AA /* 7zArcIn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 7zArcIn.c; sourceTree = "<group>"; };
+		1A9B0A4C1D453264007091AA /* 7zBuf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 7zBuf.c; sourceTree = "<group>"; };
+		1A9B0A4D1D453264007091AA /* 7zBuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 7zBuf.h; sourceTree = "<group>"; };
+		1A9B0A4E1D453264007091AA /* 7zBuf2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 7zBuf2.c; sourceTree = "<group>"; };
+		1A9B0A4F1D453264007091AA /* 7zCrc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 7zCrc.c; sourceTree = "<group>"; };
+		1A9B0A501D453264007091AA /* 7zCrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 7zCrc.h; sourceTree = "<group>"; };
+		1A9B0A511D453264007091AA /* 7zCrcOpt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 7zCrcOpt.c; sourceTree = "<group>"; };
+		1A9B0A521D453264007091AA /* 7zDec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 7zDec.c; sourceTree = "<group>"; };
+		1A9B0A531D453264007091AA /* 7zFile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 7zFile.c; sourceTree = "<group>"; };
+		1A9B0A541D453264007091AA /* 7zFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 7zFile.h; sourceTree = "<group>"; };
+		1A9B0A551D453264007091AA /* 7zStream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 7zStream.c; sourceTree = "<group>"; };
+		1A9B0A561D453264007091AA /* 7zTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 7zTypes.h; sourceTree = "<group>"; };
+		1A9B0A571D453264007091AA /* 7zVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 7zVersion.h; sourceTree = "<group>"; };
+		1A9B0A5A1D453264007091AA /* CpuArch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CpuArch.c; sourceTree = "<group>"; };
+		1A9B0A5B1D453264007091AA /* CpuArch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CpuArch.h; sourceTree = "<group>"; };
+		1A9B0A5C1D453264007091AA /* Delta.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Delta.c; sourceTree = "<group>"; };
+		1A9B0A5D1D453264007091AA /* Delta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Delta.h; sourceTree = "<group>"; };
+		1A9B0A5E1D453264007091AA /* Lzma2Dec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Lzma2Dec.c; sourceTree = "<group>"; };
+		1A9B0A5F1D453264007091AA /* Lzma2Dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lzma2Dec.h; sourceTree = "<group>"; };
+		1A9B0A601D453264007091AA /* LzmaDec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LzmaDec.c; sourceTree = "<group>"; };
+		1A9B0A611D453264007091AA /* LzmaDec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LzmaDec.h; sourceTree = "<group>"; };
+		1A9B0A661D453264007091AA /* Ppmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ppmd.h; sourceTree = "<group>"; };
+		1A9B0A671D453264007091AA /* Ppmd7.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Ppmd7.c; sourceTree = "<group>"; };
+		1A9B0A681D453264007091AA /* Ppmd7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ppmd7.h; sourceTree = "<group>"; };
+		1A9B0A691D453264007091AA /* Ppmd7Dec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Ppmd7Dec.c; sourceTree = "<group>"; };
+		1A9B0A6A1D453264007091AA /* RotateDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateDefs.h; sourceTree = "<group>"; };
+		1A9B0AA71D45642D007091AA /* SevenZipArchive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SevenZipArchive.swift; sourceTree = "<group>"; };
+		1A9B0AA91D4564CF007091AA /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		1A9B0AAA1D456A9E007091AA /* 7zInterface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 7zInterface.c; sourceTree = "<group>"; };
+		1A9B0AAB1D456A9E007091AA /* 7zInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 7zInterface.h; sourceTree = "<group>"; };
 		1AA8FC0B1D401B4D00F535F2 /* RarArchive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RarArchive.swift; sourceTree = "<group>"; };
 		1ABF2A6F1D3FE0DF00E2E7F5 /* ArchivedFilePath+Patterns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ArchivedFilePath+Patterns.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,11 +234,13 @@
 			isa = PBXGroup;
 			children = (
 				1A7F99711D401A9F00166D37 /* Unrar4iOS.xcodeproj */,
+				1A9B0A471D453264007091AA /* lzmaSDK */,
 				1A8D5FFD1D3F577D00D48A7C /* minizip */,
 				1A90C6341D3F34F10081C7FE /* Utilities */,
 				1A90C62F1D3F29170081C7FE /* Tar */,
 				1A8D603B1D3F57DC00D48A7C /* Zip */,
 				1AA8FC071D401B3700F535F2 /* Rar */,
+				1A9B0AA61D45640A007091AA /* 7zip */,
 				1A1B4E451D3FF885000E7836 /* File Directory */,
 				1A4FEDF01D3EA405000ADF27 /* UnarchiveKit.h */,
 				1A4FEDF21D3EA405000ADF27 /* Info.plist */,
@@ -275,6 +342,53 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		1A9B0A471D453264007091AA /* lzmaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				1A9B0A481D453264007091AA /* 7z.h */,
+				1A9B0A491D453264007091AA /* 7zAlloc.c */,
+				1A9B0A4A1D453264007091AA /* 7zAlloc.h */,
+				1A9B0A4B1D453264007091AA /* 7zArcIn.c */,
+				1A9B0A4C1D453264007091AA /* 7zBuf.c */,
+				1A9B0A4D1D453264007091AA /* 7zBuf.h */,
+				1A9B0A4E1D453264007091AA /* 7zBuf2.c */,
+				1A9B0A4F1D453264007091AA /* 7zCrc.c */,
+				1A9B0A501D453264007091AA /* 7zCrc.h */,
+				1A9B0A511D453264007091AA /* 7zCrcOpt.c */,
+				1A9B0A521D453264007091AA /* 7zDec.c */,
+				1A9B0A531D453264007091AA /* 7zFile.c */,
+				1A9B0A541D453264007091AA /* 7zFile.h */,
+				1A9B0A551D453264007091AA /* 7zStream.c */,
+				1A9B0A561D453264007091AA /* 7zTypes.h */,
+				1A9B0A571D453264007091AA /* 7zVersion.h */,
+				1A9B0A5A1D453264007091AA /* CpuArch.c */,
+				1A9B0A5B1D453264007091AA /* CpuArch.h */,
+				1A9B0A5C1D453264007091AA /* Delta.c */,
+				1A9B0A5D1D453264007091AA /* Delta.h */,
+				1A9B0A5E1D453264007091AA /* Lzma2Dec.c */,
+				1A9B0A5F1D453264007091AA /* Lzma2Dec.h */,
+				1A9B0A601D453264007091AA /* LzmaDec.c */,
+				1A9B0A611D453264007091AA /* LzmaDec.h */,
+				1A9B0AA91D4564CF007091AA /* module.modulemap */,
+				1A9B0A661D453264007091AA /* Ppmd.h */,
+				1A9B0A671D453264007091AA /* Ppmd7.c */,
+				1A9B0A681D453264007091AA /* Ppmd7.h */,
+				1A9B0A691D453264007091AA /* Ppmd7Dec.c */,
+				1A9B0A6A1D453264007091AA /* RotateDefs.h */,
+				1A9B0AAA1D456A9E007091AA /* 7zInterface.c */,
+				1A9B0AAB1D456A9E007091AA /* 7zInterface.h */,
+			);
+			path = lzmaSDK;
+			sourceTree = "<group>";
+		};
+		1A9B0AA61D45640A007091AA /* 7zip */ = {
+			isa = PBXGroup;
+			children = (
+				1A9B0AA71D45642D007091AA /* SevenZipArchive.swift */,
+			);
+			name = 7zip;
+			sourceTree = "<group>";
+		};
 		1AA8FC071D401B3700F535F2 /* Rar */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,20 +405,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A8D60301D3F577E00D48A7C /* sha1.h in Headers */,
+				1A9B0A701D453264007091AA /* 7z.h in Headers */,
 				1A8D60371D3F577E00D48A7C /* zip.h in Headers */,
 				1A8D60261D3F577E00D48A7C /* entropy.h in Headers */,
 				1A8D602E1D3F577E00D48A7C /* pwd2key.h in Headers */,
+				1A9B0AAD1D456A9E007091AA /* 7zInterface.h in Headers */,
+				1A9B0A831D453265007091AA /* CpuArch.h in Headers */,
+				1A9B0A7C1D453265007091AA /* 7zFile.h in Headers */,
 				1A8D60351D3F577E00D48A7C /* unzip.h in Headers */,
+				1A9B0A781D453265007091AA /* 7zCrc.h in Headers */,
+				1A9B0A7F1D453265007091AA /* 7zVersion.h in Headers */,
 				1A8D601C1D3F577E00D48A7C /* aes.h in Headers */,
+				1A9B0A8E1D453265007091AA /* Ppmd.h in Headers */,
 				1A8D60221D3F577E00D48A7C /* aestab.h in Headers */,
 				1A8D60311D3F577E00D48A7C /* crypt.h in Headers */,
 				1A8D60281D3F577E00D48A7C /* fileenc.h in Headers */,
 				1A8D601D1D3F577E00D48A7C /* aes_via_ace.h in Headers */,
+				1A9B0A891D453265007091AA /* LzmaDec.h in Headers */,
 				1A8D602C1D3F577E00D48A7C /* prng.h in Headers */,
+				1A9B0A7E1D453265007091AA /* 7zTypes.h in Headers */,
+				1A9B0A851D453265007091AA /* Delta.h in Headers */,
+				1A9B0A721D453265007091AA /* 7zAlloc.h in Headers */,
+				1A9B0A901D453265007091AA /* Ppmd7.h in Headers */,
 				1A8D60331D3F577E00D48A7C /* ioapi.h in Headers */,
 				1A8D602A1D3F577E00D48A7C /* hmac.h in Headers */,
+				1A9B0A871D453265007091AA /* Lzma2Dec.h in Headers */,
+				1A9B0A751D453265007091AA /* 7zBuf.h in Headers */,
 				1A8D60201D3F577E00D48A7C /* aesopt.h in Headers */,
 				1A4FEDF11D3EA405000ADF27 /* UnarchiveKit.h in Headers */,
+				1A9B0A921D453265007091AA /* RotateDefs.h in Headers */,
 				1A8D60241D3F577E00D48A7C /* brg_types.h in Headers */,
 				1A8D60231D3F577E00D48A7C /* brg_endian.h in Headers */,
 			);
@@ -412,29 +541,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A8D602D1D3F577E00D48A7C /* pwd2key.c in Sources */,
+				1A9B0A841D453265007091AA /* Delta.c in Sources */,
 				1A8D602B1D3F577E00D48A7C /* prng.c in Sources */,
 				1A8D60211D3F577E00D48A7C /* aestab.c in Sources */,
 				1A8D602F1D3F577E00D48A7C /* sha1.c in Sources */,
 				1A1B4E491D400A66000E7836 /* FileManager+UnarchiveKit.swift in Sources */,
+				1A9B0AA81D45642D007091AA /* SevenZipArchive.swift in Sources */,
 				1A4FEDF91D3EA5FE000ADF27 /* FileArchive.swift in Sources */,
 				1ABF2A701D3FE0DF00E2E7F5 /* ArchivedFilePath+Patterns.swift in Sources */,
+				1A9B0A7B1D453265007091AA /* 7zFile.c in Sources */,
 				1A90C6311D3F293A0081C7FE /* TarBlockHeader.swift in Sources */,
 				1A8D60321D3F577E00D48A7C /* ioapi.c in Sources */,
+				1A9B0A861D453265007091AA /* Lzma2Dec.c in Sources */,
+				1A9B0A731D453265007091AA /* 7zArcIn.c in Sources */,
 				1A90C6361D3F36030081C7FE /* FileArchive+Defaults.swift in Sources */,
+				1A9B0AAC1D456A9E007091AA /* 7zInterface.c in Sources */,
 				1A90C62E1D3F250B0081C7FE /* TarSource.swift in Sources */,
 				1A1B4E471D3FF8A3000E7836 /* DirectoryArchive.swift in Sources */,
 				1A4FEE011D3EFA0C000ADF27 /* ArchivedFilePath.swift in Sources */,
 				1A8D60271D3F577E00D48A7C /* fileenc.c in Sources */,
+				1A9B0A821D453265007091AA /* CpuArch.c in Sources */,
+				1A9B0A771D453265007091AA /* 7zCrc.c in Sources */,
 				1A4FEDFD1D3ED4FA000ADF27 /* TarArchive.swift in Sources */,
 				1A8D60341D3F577E00D48A7C /* unzip.c in Sources */,
+				1A9B0A791D453265007091AA /* 7zCrcOpt.c in Sources */,
+				1A9B0A881D453265007091AA /* LzmaDec.c in Sources */,
 				1AA8FC0C1D401B4D00F535F2 /* RarArchive.swift in Sources */,
 				1A8D603D1D3F57F100D48A7C /* ZipArchive.swift in Sources */,
+				1A9B0A7A1D453265007091AA /* 7zDec.c in Sources */,
 				1A8D60361D3F577E00D48A7C /* zip.c in Sources */,
 				1A8D60291D3F577E00D48A7C /* hmac.c in Sources */,
+				1A9B0A911D453265007091AA /* Ppmd7Dec.c in Sources */,
 				1A4FEDFF1D3EDE14000ADF27 /* InputStream+Data.swift in Sources */,
+				1A9B0A761D453265007091AA /* 7zBuf2.c in Sources */,
 				1A8D601E1D3F577E00D48A7C /* aescrypt.c in Sources */,
+				1A9B0A711D453265007091AA /* 7zAlloc.c in Sources */,
 				1A4FEDFB1D3EA9B2000ADF27 /* ArchiveFormats.swift in Sources */,
+				1A9B0A8F1D453265007091AA /* Ppmd7.c in Sources */,
+				1A9B0A7D1D453265007091AA /* 7zStream.c in Sources */,
 				1A8D601F1D3F577E00D48A7C /* aeskey.c in Sources */,
+				1A9B0A741D453265007091AA /* 7zBuf.c in Sources */,
 				1A8D60251D3F577E00D48A7C /* entropy.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,7 +697,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.jlawton.UnarchiveKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/UnarchiveKit/minizip";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/UnarchiveKit/lzmaSDK $(SRCROOT)/UnarchiveKit/minizip";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -571,7 +717,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.jlawton.UnarchiveKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/UnarchiveKit/minizip";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/UnarchiveKit/lzmaSDK $(SRCROOT)/UnarchiveKit/minizip";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

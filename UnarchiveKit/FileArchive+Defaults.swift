@@ -52,7 +52,7 @@ public extension FileArchive {
             if let relativePath = file.path.safeRelativePath {
                 let outputPath = try directory.appendingPathComponent(relativePath)
                 try FileManager.default().createParentDirectory(url: outputPath)
-                try extractFile(fileInfo: file, to: outputPath)
+                try autoreleasepool { try extractFile(fileInfo: file, to: outputPath) }
             }
         }
     }

@@ -1676,7 +1676,12 @@ SRes SzArEx_Extract(
       dictCache->outBufferSize = unpackSize;
       if (unpackSize != 0)
       {
-        dictCache->outBuffer = (Byte *)IAlloc_Alloc(allocMain, unpackSize);
+        if (unpackSize >= k7zUnpackMapDictionaryInMemoryMaxNumBytes) {
+          // map to disk is enabled and file is large
+          SzArEx_DictCache_mmap(dictCache);
+        } else {
+          dictCache->outBuffer = (Byte *)IAlloc_Alloc(allocMain, unpackSize);
+        }
         if (dictCache->outBuffer == NULL)
           res = SZ_ERROR_MEM;
       }

@@ -9,6 +9,8 @@
 #ifndef SzArEx_DictCache_h
 #define SzArEx_DictCache_h
 
+#include <stdio.h>
+
 #include "7zTypes.h"
 
 EXTERN_C_BEGIN
@@ -27,11 +29,20 @@ typedef struct
     size_t entryOffset;
     /* The size in bytes of a specific entry extracted from an archive */
     size_t outSizeProcessed;
+
+    /*  If dictionary memory is being paged to disk and the file is currently open,
+     *  then this file pointer if non-NULL. */
+    FILE *mapFile;
+    size_t mapSize;
 } SzArEx_DictCache;
 
 void SzArEx_DictCache_init(SzArEx_DictCache *dictCache, ISzAlloc *allocMain);
 
 void SzArEx_DictCache_free(SzArEx_DictCache *dictCache);
+
+int SzArEx_DictCache_mmap(SzArEx_DictCache *dictCache);
+
+void SzArEx_DictCache_munmap(SzArEx_DictCache *dictCache);
 
 EXTERN_C_END
 

@@ -9,6 +9,8 @@
 
 EXTERN_C_BEGIN
 
+#define k7zUnpackMapDictionaryInMemoryMaxNumBytes (1024*1024*4)
+
 #define k7zStartHeaderSize 0x20
 #define k7zSignatureSize 6
 

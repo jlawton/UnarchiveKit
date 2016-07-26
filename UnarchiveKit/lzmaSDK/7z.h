@@ -5,6 +5,7 @@
 #define __7Z_H
 
 #include "7zTypes.h"
+#include "SzArEx_DictCache.h"
 
 EXTERN_C_BEGIN
 
@@ -151,6 +152,9 @@ UInt16 *SzArEx_GetFullNameUtf16_Back(const CSzArEx *p, size_t fileIndex, UInt16 
 /*
   SzArEx_Extract extracts file from archive
 
+  Pass an initialized pointer to a SzArEx_DictCache object, this record will
+  contain the allocated/mapped buffer that holds decompressed data.
+
   *outBuffer must be 0 before first call for each new archive.
 
   Extracting cache:
@@ -165,18 +169,14 @@ UInt16 *SzArEx_GetFullNameUtf16_Back(const CSzArEx *p, size_t fileIndex, UInt16 
     If you use external function, you can declare these 3 cache variables
     (blockIndex, outBuffer, outBufferSize) as static in that external function.
 
-    Free *outBuffer and set *outBuffer to 0, if you want to flush cache.
+    To flush the cache, invoke SzArEx_DictCache_free().
 */
 
 SRes SzArEx_Extract(
     const CSzArEx *db,
     ILookInStream *inStream,
     UInt32 fileIndex,         /* index of file */
-    UInt32 *blockIndex,       /* index of solid block */
-    Byte **outBuffer,         /* pointer to pointer to output buffer (allocated with allocMain) */
-    size_t *outBufferSize,    /* buffer size for output buffer */
-    size_t *offset,           /* offset of stream for required file in *outBuffer */
-    size_t *outSizeProcessed, /* size of file in *outBuffer */
+    SzArEx_DictCache *dictCache,
     ISzAlloc *allocMain,
     ISzAlloc *allocTemp);
 

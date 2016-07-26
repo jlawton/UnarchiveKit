@@ -111,37 +111,29 @@ int SevenZipFileArchive_GetFileMetadata(const SevenZipFileArchive *archive, UInt
     return SZ_OK;
 }
 
-int SevenZipFileArchive_Extract(SevenZipFileArchive *archive, UInt32 fileIndex, SevenZipExtractCache *cache, SevenZipExtractedBlock *extracted) {
-    size_t offset = 0;
-    size_t outSizeProcessed = 0;
+int SevenZipFileArchive_Extract(SevenZipFileArchive *archive, UInt32 fileIndex, SzArEx_DictCache *cache, SevenZipExtractedBlock *extracted) {
 
-    SRes err = SzArEx_Extract(&(archive->archive), &(archive->lookStream.s), fileIndex, &(cache->blockIndex), &(cache->outBuffer), &(cache->outBufferSize), &offset, &outSizeProcessed, &g_defaultAlloc, &g_tempAlloc);
+    SRes err = SzArEx_Extract(&(archive->archive), &(archive->lookStream.s), fileIndex, cache, &g_defaultAlloc, &g_tempAlloc);
     if (err != SZ_OK) {
         return err;
     }
 
     if (extracted != NULL) {
-        extracted->block = cache->outBuffer + offset;
-        extracted->count = outSizeProcessed;
+        extracted->block = cache->outBuffer + cache->entryOffset;
+        extracted->count = cache->outSizeProcessed;
     }
 
     return SZ_OK;
 }
 
-// ----------------------------------------------------- Extract cache functions
-
-SevenZipExtractCache SevenZipExtractCache_Init() {
-    return (SevenZipExtractCache){
-        .blockIndex = 0xFFFFFFFF,
-        .outBuffer = 0,
-        .outBufferSize = 0,
-    };
+SzArEx_DictCache SevenZipExtractCache_Init() {
+    SzArEx_DictCache cache;
+    SzArEx_DictCache_init(&cache, &g_defaultAlloc);
+    return cache;
 }
 
-void SevenZipExtractCache_Free(SevenZipExtractCache *cache) {
-    IAlloc_Free(&g_defaultAlloc, cache->outBuffer);
-    cache->outBuffer = NULL;
-    cache->outBufferSize = 0;
+void SevenZipExtractCache_Free(SzArEx_DictCache *cache) {
+    SzArEx_DictCache_free(cache);
 }
 
 // -------------------------------------------------- Private filename functions

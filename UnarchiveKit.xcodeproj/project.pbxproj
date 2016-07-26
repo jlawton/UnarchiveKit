@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A03AA951D4746BB00667D89 /* SzArEx_DictCache.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A03AA931D4746BB00667D89 /* SzArEx_DictCache.c */; };
+		1A03AA961D4746BB00667D89 /* SzArEx_DictCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A03AA941D4746BB00667D89 /* SzArEx_DictCache.h */; };
 		1A1B4E471D3FF8A3000E7836 /* DirectoryArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B4E461D3FF8A3000E7836 /* DirectoryArchive.swift */; };
 		1A1B4E491D400A66000E7836 /* FileManager+UnarchiveKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B4E481D400A66000E7836 /* FileManager+UnarchiveKit.swift */; };
 		1A4FEDF11D3EA405000ADF27 /* UnarchiveKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4FEDF01D3EA405000ADF27 /* UnarchiveKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -110,6 +112,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A03AA931D4746BB00667D89 /* SzArEx_DictCache.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SzArEx_DictCache.c; sourceTree = "<group>"; };
+		1A03AA941D4746BB00667D89 /* SzArEx_DictCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SzArEx_DictCache.h; sourceTree = "<group>"; };
 		1A1B4E461D3FF8A3000E7836 /* DirectoryArchive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryArchive.swift; sourceTree = "<group>"; };
 		1A1B4E481D400A66000E7836 /* FileManager+UnarchiveKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+UnarchiveKit.swift"; sourceTree = "<group>"; };
 		1A4FEDED1D3EA405000ADF27 /* UnarchiveKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnarchiveKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -375,6 +379,8 @@
 				1A9B0A681D453264007091AA /* Ppmd7.h */,
 				1A9B0A691D453264007091AA /* Ppmd7Dec.c */,
 				1A9B0A6A1D453264007091AA /* RotateDefs.h */,
+				1A03AA931D4746BB00667D89 /* SzArEx_DictCache.c */,
+				1A03AA941D4746BB00667D89 /* SzArEx_DictCache.h */,
 				1A9B0AAA1D456A9E007091AA /* 7zInterface.c */,
 				1A9B0AAB1D456A9E007091AA /* 7zInterface.h */,
 			);
@@ -404,6 +410,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A03AA961D4746BB00667D89 /* SzArEx_DictCache.h in Headers */,
 				1A8D60301D3F577E00D48A7C /* sha1.h in Headers */,
 				1A9B0A701D453264007091AA /* 7z.h in Headers */,
 				1A8D60371D3F577E00D48A7C /* zip.h in Headers */,
@@ -541,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A8D602D1D3F577E00D48A7C /* pwd2key.c in Sources */,
+				1A03AA951D4746BB00667D89 /* SzArEx_DictCache.c in Sources */,
 				1A9B0A841D453265007091AA /* Delta.c in Sources */,
 				1A8D602B1D3F577E00D48A7C /* prng.c in Sources */,
 				1A8D60211D3F577E00D48A7C /* aestab.c in Sources */,

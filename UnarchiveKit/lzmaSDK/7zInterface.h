@@ -10,6 +10,7 @@
 #define _zInterface_h
 
 #include "7zTypes.h"
+#include "SzArEx_DictCache.h"
 
 EXTERN_C_BEGIN
 
@@ -31,22 +32,17 @@ SevenZipFileMetadata SevenZipFileMetadata_Init(void);
 void SevenZipFileMetadata_Free(SevenZipFileMetadata *metadata);
 int SevenZipFileArchive_GetFileMetadata(const SevenZipFileArchive *archive, UInt32 fileIndex, SevenZipFileMetadata *metadata);
 
+SzArEx_DictCache SevenZipExtractCache_Init();
+void SevenZipExtractCache_Free(SzArEx_DictCache *cache);
+
 typedef struct SevenZipExtractedBlock {
     Byte *block;
     size_t count;
 } SevenZipExtractedBlock;
 
-typedef struct SevenZipExtractCache {
-    UInt32 blockIndex;
-    Byte *outBuffer; /* it must be 0 before first call for each new archive. */
-    size_t outBufferSize;
-} SevenZipExtractCache;
-SevenZipExtractCache SevenZipExtractCache_Init();
-void SevenZipExtractCache_Free(SevenZipExtractCache *cache);
-
 int SevenZipFileArchive_GetFileMetadata(const SevenZipFileArchive *archive, UInt32 fileIndex, SevenZipFileMetadata *metadata);
 
-int SevenZipFileArchive_Extract(SevenZipFileArchive *archive, UInt32 fileIndex, SevenZipExtractCache *cache, SevenZipExtractedBlock *extracted);
+int SevenZipFileArchive_Extract(SevenZipFileArchive *archive, UInt32 fileIndex, SzArEx_DictCache *cache, SevenZipExtractedBlock *extracted);
 
 EXTERN_C_END
 

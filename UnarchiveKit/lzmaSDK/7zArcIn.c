@@ -1638,30 +1638,24 @@ SRes SzArEx_Extract(
     const CSzArEx *p,
     ILookInStream *inStream,
     UInt32 fileIndex,
-    UInt32 *blockIndex,
-    Byte **tempBuf,
-    size_t *outBufferSize,
-    size_t *offset,
-    size_t *outSizeProcessed,
+    SzArEx_DictCache *dictCache,
     ISzAlloc *allocMain,
     ISzAlloc *allocTemp)
 {
   UInt32 folderIndex = p->FileToFolder[fileIndex];
   SRes res = SZ_OK;
 
-  *offset = 0;
-  *outSizeProcessed = 0;
+  dictCache->entryOffset = 0;
+  dictCache->outSizeProcessed = 0;
 
   if (folderIndex == (UInt32)-1)
   {
-    IAlloc_Free(allocMain, *tempBuf);
-    *blockIndex = folderIndex;
-    *tempBuf = NULL;
-    *outBufferSize = 0;
+    SzArEx_DictCache_free(dictCache);
+    dictCache->blockIndex = folderIndex;
     return SZ_OK;
   }
 
-  if (*tempBuf == NULL || *blockIndex != folderIndex)
+  if (dictCache->outBuffer == NULL || dictCache->blockIndex != folderIndex)
   {
     UInt64 unpackSizeSpec = SzAr_GetFolderUnpackSize(&p->db, folderIndex);
     /*
@@ -1673,24 +1667,24 @@ SRes SzArEx_Extract(
 
     if (unpackSize != unpackSizeSpec)
       return SZ_ERROR_MEM;
-    *blockIndex = folderIndex;
-    IAlloc_Free(allocMain, *tempBuf);
-    *tempBuf = NULL;
+
+    SzArEx_DictCache_free(dictCache);
+    dictCache->blockIndex = folderIndex;
 
     if (res == SZ_OK)
     {
-      *outBufferSize = unpackSize;
+      dictCache->outBufferSize = unpackSize;
       if (unpackSize != 0)
       {
-        *tempBuf = (Byte *)IAlloc_Alloc(allocMain, unpackSize);
-        if (*tempBuf == NULL)
+        dictCache->outBuffer = (Byte *)IAlloc_Alloc(allocMain, unpackSize);
+        if (dictCache->outBuffer == NULL)
           res = SZ_ERROR_MEM;
       }
 
       if (res == SZ_OK)
       {
         res = SzAr_DecodeFolder(&p->db, folderIndex,
-            inStream, p->dataPos, *tempBuf, unpackSize, allocTemp);
+            inStream, p->dataPos, dictCache->outBuffer, unpackSize, allocTemp);
       }
     }
   }
@@ -1698,12 +1692,12 @@ SRes SzArEx_Extract(
   if (res == SZ_OK)
   {
     UInt64 unpackPos = p->UnpackPositions[fileIndex];
-    *offset = (size_t)(unpackPos - p->UnpackPositions[p->FolderToFile[folderIndex]]);
-    *outSizeProcessed = (size_t)(p->UnpackPositions[fileIndex + 1] - unpackPos);
-    if (*offset + *outSizeProcessed > *outBufferSize)
+    dictCache->entryOffset = (size_t)(unpackPos - p->UnpackPositions[p->FolderToFile[folderIndex]]);
+    dictCache->outSizeProcessed = (size_t)(p->UnpackPositions[fileIndex + 1] - unpackPos);
+    if (dictCache->entryOffset + dictCache->outSizeProcessed > dictCache->outBufferSize)
       return SZ_ERROR_FAIL;
     if (SzBitWithVals_Check(&p->CRCs, fileIndex))
-      if (CrcCalc(*tempBuf + *offset, *outSizeProcessed) != p->CRCs.Vals[fileIndex])
+      if (CrcCalc(dictCache->outBuffer + dictCache->entryOffset, dictCache->outSizeProcessed) != p->CRCs.Vals[fileIndex])
         res = SZ_ERROR_CRC;
   }
 

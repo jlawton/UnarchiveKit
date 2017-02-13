@@ -3,7 +3,7 @@
 An iOS framework, written in Swift, to provide a common interface for reading
 files from archives.
 
-Currently supports Zip and Tar files.
+Currently supports unencrypted Zip, Tar, Rar and 7zip files.
 
 ## Installation
 

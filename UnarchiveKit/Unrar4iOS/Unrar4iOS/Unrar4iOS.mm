@@ -93,33 +93,47 @@ int CALLBACK CallbackProc(UINT msg, long UserData, long P1, long P2) {
 	return YES;
 }
 
--(NSArray *) unrarListFiles {
+-(NSArray<NSString *> *) unrarListFiles {
     return [self unrarListFilesWithDirectories:YES];
 }
 
--(NSArray *) unrarListFilesWithDirectories:(BOOL)includeDirectories {
+-(NSArray<NSString *> *) unrarListFilesWithDirectories:(BOOL)includeDirectories {
+    NSMutableArray<NSString *> *files = [NSMutableArray array];
+    [self enumerateFilesWithDirectories:includeDirectories block:^(NSString *filename, uint64_t length) {
+        [files addObject:filename];
+    }];
+    return files;
+}
+
+static inline uint64_t GetFilesize(RARHeaderDataEx *header) {
+    return (header->UnpSizeHigh << 32) | header->UnpSize;
+}
+
+- (BOOL)enumerateFilesWithDirectories:(BOOL)includeDirectories block:(NS_NOESCAPE void(^)(NSString * _Nonnull filename, uint64_t length))block {
     int RHCode = 0, PFCode = 0;
 
     if ([self _unrarOpenFile:filename inMode:RAR_OM_LIST_INCSPLIT withPassword:password] == NO)
-        return nil;
+        return NO;
 
-    NSMutableArray *files = [NSMutableArray array];
     while ((RHCode = RARReadHeaderEx(_rarFile, header)) == 0) {
         BOOL isDirectory = (header->Flags & 0xe0) == 0xe0;
         if (includeDirectories || !isDirectory) {
             wchar_t *fileNameW = header->FileNameW;
-            NSString *_filename = [[[NSString alloc] initWithBytes:fileNameW length:wcslen(fileNameW) * sizeof(*fileNameW) encoding:NSUTF32LittleEndianStringEncoding] autorelease];
-            [files addObject:_filename];
+            NSString *_filename = [[[NSString alloc]
+                initWithBytes:fileNameW
+                length:wcslen(fileNameW) * sizeof(*fileNameW)
+                encoding:NSUTF32LittleEndianStringEncoding] autorelease];
+            block(_filename, GetFilesize(header));
         }
 
         if ((PFCode = RARProcessFile(_rarFile, RAR_SKIP, NULL, NULL)) != 0) {
             [self _unrarCloseFile];
-            return nil;
+            return NO;
         }
     }
     
     [self _unrarCloseFile];
-    return files;
+    return YES;
 }
 
 -(BOOL) unrarFileTo:(NSString*)path overWrite:(BOOL)overwrite {
@@ -159,7 +173,7 @@ int CALLBACK CallbackProc(UINT msg, long UserData, long P1, long P2) {
     NSString *_filename = [[[NSString alloc] initWithBytes:fileNameW length:wcslen(fileNameW) * sizeof(*fileNameW) encoding:NSUTF32LittleEndianStringEncoding] autorelease];
 				
 		if ([_filename isEqualToString:aFile]) {
-			length = header->UnpSize;
+			length = GetFilesize(header);
 			break;
 		} 
 		else {

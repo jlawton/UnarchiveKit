@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface Unrar4iOS : NSObject
 
 @property(nonatomic, retain) NSString* filename;
@@ -15,10 +17,13 @@
 
 -(BOOL) unrarOpenFile:(NSString*) rarFile;
 -(BOOL) unrarOpenFile:(NSString*) rarFile withPassword:(NSString*) aPassword;
--(NSArray *) unrarListFiles;
--(NSArray *) unrarListFilesWithDirectories:(BOOL)includeDirectories;
+-(NSArray<NSString *> *) unrarListFiles;
+-(NSArray<NSString *> *) unrarListFilesWithDirectories:(BOOL)includeDirectories;
+- (BOOL)enumerateFilesWithDirectories:(BOOL)includeDirectories block:(NS_NOESCAPE void(^)(NSString  * _Nonnull filename, uint64_t length))block;
 -(BOOL) unrarFileTo:(NSString*)path overWrite:(BOOL)overwrite;
--(NSData *) extractStream:(NSString *)aFile;
+-(nullable NSData *) extractStream:(NSString *)aFile;
 -(BOOL) unrarCloseFile;
 
 @end
+
+NS_ASSUME_NONNULL_END

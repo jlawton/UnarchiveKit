@@ -22,16 +22,17 @@ final class RarArchive: FileArchive {
     }
 
     func allFiles() throws -> [ArchivedFileInfo] {
-        guard let filePaths = rar.unrarListFiles(withDirectories: false) else {
-            throw RarArchiveError.ReadError
-        }
-
         var files: [ArchivedFileInfo] = []
-        for path in filePaths {
-            if let path = path as? String,
-               let f = RarFileInfo(path: path) {
+        let ok = rar.enumerateFiles(withDirectories: false) { (path: String, size: UInt64) in
+            if UIntMax(size) < UIntMax(Int.max),
+                let f = RarFileInfo(path: path, fileSize: Int(size))
+            {
                 files.append(f)
             }
+        }
+
+        guard ok else {
+            throw RarArchiveError.ReadError
         }
 
         return files
@@ -57,10 +58,12 @@ final class RarArchive: FileArchive {
 struct RarFileInfo: ArchivedFileInfo {
     let path: ArchivedFilePath
     let originalPath: String
+    let fileSize: Int
 
-    init?(path: String) {
+    init?(path: String, fileSize: Int) {
         self.originalPath = path
         self.path = ArchivedFilePath(path)
+        self.fileSize = fileSize
     }
 }
 

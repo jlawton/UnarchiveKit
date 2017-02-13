@@ -16,10 +16,10 @@ public protocol FileArchive {
     func extractDataStream(fileInfo: ArchivedFileInfo) throws -> InputStream
 
     // This has a default implementation based on `allFiles()`
-    func filesMatching(_ predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws -> [ArchivedFileInfo]
+    func filesMatching(_ predicate: (ArchivedFileInfo) -> Bool) throws -> [ArchivedFileInfo]
 
     // This has a default implementation based on `filesMatching(_:)`
-    func locateFile(_ predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws -> ArchivedFileInfo?
+    func locateFile(_ predicate: (ArchivedFileInfo) -> Bool) throws -> ArchivedFileInfo?
 
     // This has a default implementation based on `locateFile(_:)`
     func locateFile(path: String) throws -> ArchivedFileInfo?
@@ -37,7 +37,7 @@ public protocol FileArchive {
     func extractAllFiles(toDirectory directory: URL) throws
 
     // This has a default implementation based on `filesMatching(_:)` and `extractFile(fileInfo:url:)`
-    func extractFiles(toDirectory directory: URL, matching predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws
+    func extractFiles(toDirectory directory: URL, matching predicate: (ArchivedFileInfo) -> Bool) throws
 
 }
 
@@ -47,7 +47,7 @@ public protocol ArchivedFileInfo {
 }
 
 public func openFileArchive(url: URL) throws -> FileArchive {
-    if FileManager.default().isDirectory(url: url) {
+    if FileManager.default.isDirectory(url: url) {
         return try DirectoryArchive(url: url)
     }
 
@@ -64,6 +64,6 @@ public func openFileArchive(url: URL) throws -> FileArchive {
     }
 }
 
-enum FileArchiveError: ErrorProtocol {
+enum FileArchiveError: Error {
     case UnknownArchiveFormat
 }

@@ -25,10 +25,8 @@ private let commonArchiveExtensions: [String: ArchiveFormat] = [
 ]
 
 func guessFormatFromName(url: URL) -> ArchiveFormat? {
-    if let ext = url.pathExtension?.lowercased() {
-        return commonArchiveExtensions[ext]
-    }
-    return nil
+    let ext = url.pathExtension.lowercased()
+    return commonArchiveExtensions[ext]
 }
 
 // ----------------------------------------------------------------- Magic bytes
@@ -54,7 +52,7 @@ func guessFormatFromMagicBytes(url: URL) throws -> ArchiveFormat? {
 
 func guessFormatFromMagicBytes(data: Data) -> ArchiveFormat? {
     var bytes = [UInt8](repeating: 0, count: 4)
-    data.copyBytes(to: &bytes, count: 4 * sizeof(UInt8))
+    data.copyBytes(to: &bytes, count: 4 * MemoryLayout<UInt8>.size)
 
     for (magic, format) in magicBytes {
         assert(magic.count == 4)

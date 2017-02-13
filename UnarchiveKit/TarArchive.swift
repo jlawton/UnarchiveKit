@@ -74,6 +74,6 @@ struct TarFileInfo: ArchivedFileInfo {
     }
 }
 
-enum TarArchiveError: ErrorProtocol {
+enum TarArchiveError: Error {
     case BadFileInfo
 }

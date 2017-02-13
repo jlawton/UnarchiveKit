@@ -13,15 +13,13 @@ extension FileManager {
     func isDirectory(url: URL) -> Bool {
         var isDirectory: ObjCBool = false
         return url.isFileURL
-            && (url.path != nil)
-            && fileExists(atPath: url.path!, isDirectory: &isDirectory)
-            && isDirectory
+            && fileExists(atPath: url.path, isDirectory: &isDirectory)
+            && isDirectory.boolValue
     }
 
     func createParentDirectory(url: URL) throws {
-        if let parent = try? url.deletingLastPathComponent() {
-            try FileManager.default().createDirectory(at: parent, withIntermediateDirectories: true, attributes: nil)
-        }
+        let parent = url.deletingLastPathComponent()
+        try FileManager.default.createDirectory(at: parent, withIntermediateDirectories: true, attributes: nil)
     }
 
 }

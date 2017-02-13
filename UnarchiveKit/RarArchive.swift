@@ -13,7 +13,7 @@ final class RarArchive: FileArchive {
     let rar = Unrar4iOS()
 
     init(url: URL) throws {
-        guard url.isFileURL && url.path != nil else {
+        guard url.isFileURL else {
             throw RarArchiveError.ReadError
         }
         if !rar.unrarOpenFile(url.path) {
@@ -64,7 +64,7 @@ struct RarFileInfo: ArchivedFileInfo {
     }
 }
 
-enum RarArchiveError: ErrorProtocol {
+enum RarArchiveError: Error {
     case ReadError
     case BadFileInfo
 }

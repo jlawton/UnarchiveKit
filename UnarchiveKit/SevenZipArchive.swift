@@ -22,11 +22,11 @@ class SevenZipArchive: FileArchive {
     init(url: URL) throws {
         SevenZipInit()
         archiveURL = url
-        guard let path = url.path where url.isFileURL else {
+        guard url.isFileURL else {
             throw SevenZipArchiveError.ReadError
         }
 
-        archive = SevenZipFileArchive_Open(path)
+        archive = SevenZipFileArchive_Open(url.path)
         guard archive != nil else {
             throw SevenZipArchiveError.ReadError
         }
@@ -108,7 +108,7 @@ struct SevenZipFileInfo: ArchivedFileInfo {
     }
 }
 
-enum SevenZipArchiveError: ErrorProtocol {
+enum SevenZipArchiveError: Error {
     case ReadError
     case BadFileInfo
 }

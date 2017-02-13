@@ -11,7 +11,7 @@ import Foundation
 public extension ArchivedFilePath {
 
     func isProbablyMacOSJunk() -> Bool {
-        guard let path = safeRelativePath?.components(separatedBy: "/") where path.count > 0 else {
+        guard let path = safeRelativePath?.components(separatedBy: "/"), path.count > 0 else {
             return false
         }
 

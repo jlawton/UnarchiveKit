@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum DataStreamError: ErrorProtocol {
-    case ReadError(NSError?)
-    case WriteError(NSError?)
+enum DataStreamError: Error {
+    case ReadError(Error?)
+    case WriteError(Error?)
 }
 
 enum DataStreamResult {
@@ -21,30 +21,30 @@ enum DataStreamResult {
 extension InputStream {
 
     func synchronouslyGetData() throws -> Data {
-        let outputStream = NSOutputStream.init(toMemory: ())
+        let outputStream = OutputStream.init(toMemory: ())
 
         try synchronouslyWrite(to: outputStream, bufferSize: 4096)
 
-        let data = outputStream.property(forKey: Stream.PropertyKey.dataWrittenToMemoryStreamKey.rawValue) as? Data
+        let data = outputStream.property(forKey: Stream.PropertyKey.dataWrittenToMemoryStreamKey) as? Data
         return data ?? Data()
     }
 
     func synchronouslyWrite(url: URL, append: Bool = false) throws {
-        if let outputStream = NSOutputStream(url: url, append: append) {
+        if let outputStream = OutputStream(url: url, append: append) {
             try synchronouslyWrite(to: outputStream)
         } else {
             throw DataStreamError.WriteError(nil)
         }
     }
 
-    func asynchronouslyGetData(in runLoop: RunLoop, complete: (DataStreamResult) -> Void) {
+    func asynchronouslyGetData(in runLoop: RunLoop, complete: @escaping (DataStreamResult) -> Void) {
         let delegate = StreamDataDelegate(self, complete: complete)
         delegate.schedule(in: runLoop)
     }
 
     // Closes both input and output streams before completion
     // iOS uses 8K blocks for user file storage, so going with that by default
-    private func synchronouslyWrite(to outputStream: NSOutputStream, bufferSize: Int = 8192) throws {
+    private func synchronouslyWrite(to outputStream: OutputStream, bufferSize: Int = 8192) throws {
         open()
         defer {
             close()
@@ -79,9 +79,9 @@ private class StreamDataDelegate: NSObject, StreamDelegate {
     private let inputStream: InputStream
     private let complete: (DataStreamResult) -> Void
     private var isComplete: Bool = false
-    private let outputStream = NSOutputStream.init(toMemory: ())
+    private let outputStream = OutputStream.init(toMemory: ())
 
-    init(_ inputStream: InputStream, complete: (DataStreamResult) -> Void) {
+    init(_ inputStream: InputStream, complete: @escaping (DataStreamResult) -> Void) {
         self.inputStream = inputStream
         self.complete = complete
     }
@@ -106,7 +106,7 @@ private class StreamDataDelegate: NSObject, StreamDelegate {
             }
 
         case Stream.Event.endEncountered:
-            let data = outputStream.property(forKey: Stream.PropertyKey.dataWrittenToMemoryStreamKey.rawValue) as? Data
+            let data = outputStream.property(forKey: Stream.PropertyKey.dataWrittenToMemoryStreamKey) as? Data
             doComplete(.Success(data ?? Data()))
 
         case Stream.Event.errorOccurred:
@@ -125,7 +125,7 @@ private class StreamDataDelegate: NSObject, StreamDelegate {
             isComplete = true
             inputStream.delegate = nil
             inputStream.close()
-            inputStream.remove(from: RunLoop.current(), forMode: RunLoopMode.defaultRunLoopMode)
+            inputStream.remove(from: RunLoop.current, forMode: RunLoopMode.defaultRunLoopMode)
             outputStream.close()
             complete(result)
         }

@@ -10,11 +10,11 @@ import Foundation
 
 public extension FileArchive {
 
-    func filesMatching(_ predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws -> [ArchivedFileInfo] {
+    func filesMatching(_ predicate: (ArchivedFileInfo) -> Bool) throws -> [ArchivedFileInfo] {
         return try allFiles().filter(predicate)
     }
 
-    func locateFile(_ predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws -> ArchivedFileInfo? {
+    func locateFile(_ predicate: (ArchivedFileInfo) -> Bool) throws -> ArchivedFileInfo? {
         return try filesMatching(predicate).first
     }
 
@@ -45,13 +45,13 @@ public extension FileArchive {
         return try extractFiles(toDirectory: directory) { _ in return true }
     }
 
-    func extractFiles(toDirectory directory: URL, matching predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws {
-        try FileManager.default().createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
+    func extractFiles(toDirectory directory: URL, matching predicate: (ArchivedFileInfo) -> Bool) throws {
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
 
         for file in try filesMatching(predicate) {
             if let relativePath = file.path.safeRelativePath {
-                let outputPath = try directory.appendingPathComponent(relativePath)
-                try FileManager.default().createParentDirectory(url: outputPath)
+                let outputPath = directory.appendingPathComponent(relativePath)
+                try FileManager.default.createParentDirectory(url: outputPath)
                 try autoreleasepool { try extractFile(fileInfo: file, to: outputPath) }
             }
         }

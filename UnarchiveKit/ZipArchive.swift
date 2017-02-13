@@ -14,14 +14,14 @@ final class ZipArchive: FileArchive {
     let zipURL: URL
 
     init(url: URL) throws {
-        if url.path == nil || !FileManager.default().fileExists(atPath: url.path!) {
+        if !FileManager.default.fileExists(atPath: url.path) {
             throw ZipArchiveError.ReadError
         }
         zipURL = url
     }
 
     func allFiles() throws -> [ArchivedFileInfo] {
-        guard let zip = unzOpen64(zipURL.path!) else {
+        guard let zip = unzOpen64(zipURL.path) else {
             throw ZipArchiveError.ReadError
         }
         defer {
@@ -49,7 +49,7 @@ final class ZipArchive: FileArchive {
             throw ZipArchiveError.BadFileInfo
         }
 
-        guard let zip = unzOpen64(zipURL.path!) else {
+        guard let zip = unzOpen64(zipURL.path) else {
             throw ZipArchiveError.ReadError
         }
         defer {
@@ -74,10 +74,10 @@ final class ZipArchive: FileArchive {
 
     // This should be faster than the default implementation
     // but has different semantics w.r.t. corrupted archives
-    func extractFiles(toDirectory directory: URL, matching predicate: (fileInfo: ArchivedFileInfo) -> Bool) throws {
-        try FileManager.default().createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
+    func extractFiles(toDirectory directory: URL, matching predicate: (ArchivedFileInfo) -> Bool) throws {
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
 
-        guard let zip = unzOpen64(zipURL.path!) else {
+        guard let zip = unzOpen64(zipURL.path) else {
             throw ZipArchiveError.ReadError
         }
         defer {
@@ -88,15 +88,15 @@ final class ZipArchive: FileArchive {
             guard let fileInfo = try currentFileInfo(zip) else {
                 return
             }
-            guard predicate(fileInfo: fileInfo) else {
+            guard predicate(fileInfo) else {
                 return
             }
             guard let relativePath = fileInfo.path.safeRelativePath else {
                 return
             }
 
-            let outputPath = try directory.appendingPathComponent(relativePath)
-            try FileManager.default().createParentDirectory(url: outputPath)
+            let outputPath = directory.appendingPathComponent(relativePath)
+            try FileManager.default.createParentDirectory(url: outputPath)
 
             let data = try readCurrentFile(zip)
             try data.write(to: outputPath)
@@ -105,7 +105,7 @@ final class ZipArchive: FileArchive {
 
     // Private
 
-    private func enumerateFiles(in zip: unzFile, block: @noescape (unzFile) throws -> Void) throws {
+    private func enumerateFiles(in zip: unzFile, block: (unzFile) throws -> Void) throws {
         if unzGoToFirstFile(zip) != UNZ_OK {
             throw ZipArchiveError.ReadError
         }
@@ -146,7 +146,7 @@ final class ZipArchive: FileArchive {
 
 private func currentFileInfo(_ zip: unzFile) throws -> ZipFileInfo? {
     var fileInfo = unz_file_info64()
-    memset(&fileInfo, 0, sizeof(unz_file_info))
+    memset(&fileInfo, 0, MemoryLayout<unz_file_info>.size)
 
     // Get basic info
     let status = unzGetCurrentFileInfo64(zip, &fileInfo, nil, 0, nil, 0, nil, 0)
@@ -172,7 +172,7 @@ private func currentFileInfo(_ zip: unzFile) throws -> ZipFileInfo? {
 }
 
 private func readCurrentFile(_ zip: unzFile) throws -> Data {
-    let outputStream = NSOutputStream(toMemory: ())
+    let outputStream = OutputStream(toMemory: ())
     outputStream.open()
 
     var buffer = [UInt8](repeating: 0, count: 4096)
@@ -191,7 +191,7 @@ private func readCurrentFile(_ zip: unzFile) throws -> Data {
         }
     }
 
-    let data = outputStream.property(forKey: Stream.PropertyKey.dataWrittenToMemoryStreamKey.rawValue) as? Data
+    let data = outputStream.property(forKey: Stream.PropertyKey.dataWrittenToMemoryStreamKey) as? Data
     outputStream.close()
 
     return data ?? Data()
@@ -214,7 +214,7 @@ struct ZipFileInfo: ArchivedFileInfo {
     }
 }
 
-enum ZipArchiveError: ErrorProtocol {
+enum ZipArchiveError: Error {
     case ReadError
     case BadFileInfo
     case ArchivedFileNotFound

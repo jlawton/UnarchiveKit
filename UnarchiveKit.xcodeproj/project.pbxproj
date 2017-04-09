@@ -457,6 +457,7 @@
 				1A4FEDE91D3EA405000ADF27 /* Frameworks */,
 				1A4FEDEA1D3EA405000ADF27 /* Headers */,
 				1A4FEDEB1D3EA405000ADF27 /* Resources */,
+				1ACDB1091E99FCE000B9D4C0 /* Copy products to Carthage/Build/iOS */,
 			);
 			buildRules = (
 			);
@@ -541,6 +542,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1ACDB1091E99FCE000B9D4C0 /* Copy products to Carthage/Build/iOS */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy products to Carthage/Build/iOS";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "CARTHAGE_BUILD_DIR=\"$SRCROOT/Carthage/Build\"\n\n# Only copy when the Carthage/Build directory is a symlink\nif ! [ -L \"$CARTHAGE_BUILD_DIR\" ]; then exit 0; fi\n\nrsync --delete -av \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME\"* \"$CARTHAGE_BUILD_DIR/iOS\"\nrsync --delete -av \"$BUILT_PRODUCTS_DIR/UnrarFW4iOS.framework\"* \"$CARTHAGE_BUILD_DIR/iOS\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A4FEDE81D3EA405000ADF27 /* Sources */ = {

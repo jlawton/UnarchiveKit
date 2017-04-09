@@ -9,3 +9,5 @@
 # Xcode user data
 xcuserdata/
 
+# Carthage
+Carthage/

@@ -24,7 +24,7 @@ final class RarArchive: FileArchive {
     func allFiles() throws -> [ArchivedFileInfo] {
         var files: [ArchivedFileInfo] = []
         let ok = rar.enumerateFiles(withDirectories: false) { (path: String, size: UInt64) in
-            if UIntMax(size) < UIntMax(Int.max),
+            if UInt64(size) < UInt64(Int.max),
                 let f = RarFileInfo(path: path, fileSize: Int(size))
             {
                 files.append(f)

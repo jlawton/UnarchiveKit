@@ -21,7 +21,7 @@ enum DataStreamResult {
 extension InputStream {
 
     func synchronouslyGetData() throws -> Data {
-        let outputStream = OutputStream.init(toMemory: ())
+        let outputStream = OutputStream(toMemory: ())
 
         try synchronouslyWrite(to: outputStream, bufferSize: 4096)
 
@@ -79,7 +79,7 @@ private class StreamDataDelegate: NSObject, StreamDelegate {
     private let inputStream: InputStream
     private let complete: (DataStreamResult) -> Void
     private var isComplete: Bool = false
-    private let outputStream = OutputStream.init(toMemory: ())
+    private let outputStream = OutputStream(toMemory: ())
 
     init(_ inputStream: InputStream, complete: @escaping (DataStreamResult) -> Void) {
         self.inputStream = inputStream
@@ -88,7 +88,7 @@ private class StreamDataDelegate: NSObject, StreamDelegate {
 
     func schedule(in runloop: RunLoop) {
         inputStream.delegate = self
-        inputStream.schedule(in: runloop, forMode: RunLoopMode.defaultRunLoopMode)
+        inputStream.schedule(in: runloop, forMode: RunLoop.Mode.default)
         inputStream.open()
     }
 
@@ -125,7 +125,7 @@ private class StreamDataDelegate: NSObject, StreamDelegate {
             isComplete = true
             inputStream.delegate = nil
             inputStream.close()
-            inputStream.remove(from: RunLoop.current, forMode: RunLoopMode.defaultRunLoopMode)
+            inputStream.remove(from: RunLoop.current, forMode: RunLoop.Mode.default)
             outputStream.close()
             complete(result)
         }

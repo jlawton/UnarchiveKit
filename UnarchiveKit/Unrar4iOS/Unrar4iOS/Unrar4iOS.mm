@@ -55,7 +55,7 @@ int CALLBACK CallbackProc(UINT msg, long UserData, long P1, long P2) {
 	return [self unrarOpenFile:rarFile withPassword:nil];
 }
 
--(BOOL) unrarOpenFile:(NSString*)rarFile withPassword:(NSString *)aPassword {
+-(BOOL) unrarOpenFile:(NSString*)rarFile withPassword:(nullable NSString *)aPassword {
     
 	self.filename = rarFile;
     self.password = aPassword;
@@ -67,7 +67,7 @@ int CALLBACK CallbackProc(UINT msg, long UserData, long P1, long P2) {
     return [self _unrarOpenFile:rarFile inMode:mode withPassword:nil];
 }
 
-- (BOOL)_unrarOpenFile:(NSString *)rarFile inMode:(unsigned int)mode withPassword:(NSString *)aPassword {
+- (BOOL)_unrarOpenFile:(NSString *)rarFile inMode:(unsigned int)mode withPassword:(nullable NSString *)aPassword {
     
 	header = new RARHeaderDataEx;
     bzero(header, sizeof(RARHeaderDataEx));
@@ -106,7 +106,7 @@ int CALLBACK CallbackProc(UINT msg, long UserData, long P1, long P2) {
 }
 
 static inline uint64_t GetFilesize(RARHeaderDataEx *header) {
-    return (header->UnpSizeHigh << 32) | header->UnpSize;
+    return ((uint64_t)header->UnpSizeHigh << 32) | header->UnpSize;
 }
 
 - (BOOL)enumerateFilesWithDirectories:(BOOL)includeDirectories block:(NS_NOESCAPE void(^)(NSString * _Nonnull filename, uint64_t length))block {
@@ -223,8 +223,8 @@ static inline uint64_t GetFilesize(RARHeaderDataEx *header) {
     
     if (flags)
         delete flags->ArcName;
-	delete flags, flags = 0;
-    delete header, header = 0;
+    delete flags; flags = 0;
+    delete header; header = 0;
 	return YES;
 }
 

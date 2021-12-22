@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Unrar4iOS : NSObject
 
 @property(nonatomic, retain) NSString* filename;
-@property(nonatomic, retain) NSString* password;
+@property(nonatomic, retain, nullable) NSString* password;
 
 -(BOOL) unrarOpenFile:(NSString*) rarFile;
--(BOOL) unrarOpenFile:(NSString*) rarFile withPassword:(NSString*) aPassword;
+-(BOOL) unrarOpenFile:(NSString*) rarFile withPassword:(nullable NSString*) aPassword;
 -(NSArray<NSString *> *) unrarListFiles;
 -(NSArray<NSString *> *) unrarListFilesWithDirectories:(BOOL)includeDirectories;
 - (BOOL)enumerateFilesWithDirectories:(BOOL)includeDirectories block:(NS_NOESCAPE void(^)(NSString  * _Nonnull filename, uint64_t length))block;

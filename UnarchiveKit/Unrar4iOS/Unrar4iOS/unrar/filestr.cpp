@@ -33,9 +33,11 @@ bool ReadTextFile(
 #endif
 
   File SrcFile;
-  if (FileName!=NULL && *FileName!=0 || FileNameW!=NULL && *FileNameW!=0)
+  if (*FileName!=0 || *FileNameW!=0)
   {
-    bool OpenCode=AbortOnError ? SrcFile.WOpen(FileName,FileNameW):SrcFile.Open(FileName,FileNameW,0);
+    bool OpenCode=AbortOnError
+      ? SrcFile.WOpen(FileName,FileNameW)
+      : SrcFile.Open(FileName,FileNameW,0);
 
     if (!OpenCode)
     {

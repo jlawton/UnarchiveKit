@@ -32,7 +32,7 @@ SevenZipFileMetadata SevenZipFileMetadata_Init(void);
 void SevenZipFileMetadata_Free(SevenZipFileMetadata *metadata);
 int SevenZipFileArchive_GetFileMetadata(const SevenZipFileArchive *archive, UInt32 fileIndex, SevenZipFileMetadata *metadata);
 
-SzArEx_DictCache SevenZipExtractCache_Init();
+SzArEx_DictCache SevenZipExtractCache_Init(void);
 void SevenZipExtractCache_Free(SzArEx_DictCache *cache);
 
 typedef struct SevenZipExtractedBlock {

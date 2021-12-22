@@ -23,7 +23,7 @@ typedef struct SevenZipFilenameBuffer {
     size_t byteCount;
 } SevenZipFilenameBuffer;
 
-SevenZipFilenameBuffer SevenZipFilenameBuffer_Init();
+SevenZipFilenameBuffer SevenZipFilenameBuffer_Init(void);
 int SevenZipFilenameBuffer_Realloc(SevenZipFilenameBuffer *buffer, size_t length);
 void SevenZipFilenameBuffer_Free(SevenZipFilenameBuffer *buffer);
 

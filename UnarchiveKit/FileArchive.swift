@@ -73,6 +73,12 @@ public protocol FileArchive {
     ///   - predicate: Returns `true` iff the file matches.
     func extractFiles(toDirectory directory: URL, matching predicate: (ArchivedFileInfo) -> Bool) throws
 
+    // This has a default implementation based on `ArchiveSubdirectory`
+    /// An archive representing just the files within a subdirectory
+    /// of this archive.
+    ///
+    /// - Parameter path: The path of a directory that exists in the archive.
+    func subdirectory(_ path: String) throws -> FileArchive
 }
 
 // A protocol describing a single archived file

@@ -46,3 +46,21 @@ public struct ArchivedFilePath {
         return nil
     }
 }
+
+extension ArchivedFilePath {
+    func map(_ transform: (String) -> String) -> ArchivedFilePath {
+        return ArchivedFilePath(transform(path))
+    }
+    func compactMap(_ transform: (String) -> String?) -> ArchivedFilePath? {
+        return transform(path).map(ArchivedFilePath.init(_:))
+    }
+
+    func stripPrefix(_ prefix: String) -> ArchivedFilePath? {
+        return compactMap { (path: String) -> String? in
+            guard path.hasPrefix(prefix) else {
+                return nil
+            }
+            return String(path.dropFirst(prefix.count))
+        }
+    }
+}

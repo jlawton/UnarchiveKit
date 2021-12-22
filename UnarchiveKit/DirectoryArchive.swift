@@ -51,6 +51,21 @@ struct DirectoryArchive: FileArchive {
         return stream
     }
 
+    // This doesn't have quite the same semantics as the default implementation
+    // when it comes to missing directories and non-canonical paths, but no
+    // particular gurantees are provided in that regard.
+    func subdirectory(_ path: String) throws -> DirectoryArchive {
+        let withSlash = path.hasSuffix("/") ? path : path.appending("/")
+        if withSlash.hasPrefix("/") ||
+            withSlash.hasPrefix("../") ||
+            withSlash.range(of: "/../") != nil
+        {
+            throw ArchiveSubdirectoryError.InvalidPath
+        }
+        let url = directoryURL.appendingPathComponent(path, isDirectory: true)
+        return try DirectoryArchive(url: url)
+    }
+
 }
 
 struct DirectoryFileInfo: ArchivedFileInfo {

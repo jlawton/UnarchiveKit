@@ -56,5 +56,13 @@ public extension FileArchive {
             }
         }
     }
-    
+
+    func subdirectory(_ path: String) throws -> FileArchive {
+        let disallowed = ["", ".", "..", "/", "./", "../"]
+        if disallowed.contains(path) {
+            throw ArchiveSubdirectoryError.InvalidPath
+        }
+        return ArchiveSubdirectory(self, directory: path)
+    }
+
 }
